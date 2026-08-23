@@ -30,3 +30,25 @@ mod_names() {
         [ "$(readlink "$FIXTURE/Mods/$name")" = "$REPO_ROOT/mods/$name" ]
     done
 }
+
+@test "is idempotent" {
+    local before after
+    before="$(find "$REPO_ROOT/mods" | sort)"
+
+    run "$SCRIPT"
+    [ "$status" -eq 0 ]
+
+    run "$SCRIPT"
+    [ "$status" -eq 0 ]
+
+    for name in $(mod_names); do
+        [ "$(readlink "$FIXTURE/Mods/$name")" = "$REPO_ROOT/mods/$name" ]
+    done
+
+    # A second run must not write anything into the repo. `ln -s` follows an
+    # existing symlink-to-a-directory and creates the link *inside* it, which
+    # leaves the outer link looking correct — so checking readlink alone is
+    # not enough to prove idempotency.
+    after="$(find "$REPO_ROOT/mods" | sort)"
+    [ "$before" = "$after" ]
+}

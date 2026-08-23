@@ -241,8 +241,9 @@ check: ## Validate all mod XML
 ```
 
 `-print0`/`-0` survives spaces in paths. `xargs -r` is what stops a bare
-`xmllint --noout` running with no arguments and blocking on stdin when no XML
-exists yet.
+`xmllint --noout` running with no arguments when no XML exists yet — without
+it, xargs invokes xmllint anyway, which prints its usage and exits non-zero,
+turning an empty tree into a spurious check failure.
 
 - [ ] **Step 2: Verify it passes on the current tree**
 

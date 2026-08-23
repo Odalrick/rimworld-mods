@@ -34,6 +34,35 @@ game version; version-specific overrides would go in a sibling `1.6/` (see
 `docs/superpowers/specs/` for why, and for the load-order rules this relies
 on).
 
+## Development
+
+```sh
+git clone git@github.com:Odalrick/rimworld-mods.git
+cd rimworld-mods
+make          # list what you can do
+make link     # symlink every mod into RimWorld's Mods/ directory
+```
+
+`make link` is a one-off. After it, edits in this repo are live in the game —
+change XML, restart RimWorld, see the result. Re-run it after adding a new
+mod.
+
+If RimWorld is not at
+`${XDG_DATA_HOME:-$HOME/.local/share}/Steam/steamapps/common/RimWorld` — a
+second Steam library on another drive being the usual reason — set
+`RIMWORLD_DIR`. Copy `.envrc.example` to `.envrc` and run `direnv allow`, or
+export it yourself.
+
+Before committing:
+
+```sh
+make check    # validate mod XML
+make test     # run the tests
+```
+
+Mod load errors appear only in the game's log:
+`~/.config/unity3d/Ludeon Studios/RimWorld by Ludeon Studios/Player.log`
+
 ## Licence
 
 MIT. See `LICENSE`.

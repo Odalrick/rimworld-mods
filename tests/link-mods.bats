@@ -79,3 +79,19 @@ mod_names() {
     [ "$status" -ne 0 ]
     [[ "$output" == *"$name"* ]]
 }
+
+@test "fails with a clear message when Mods/ is missing" {
+    local bare
+    bare="$FIXTURE/elsewhere"
+    mkdir -p "$bare"          # deliberately no Mods/ inside
+    export RIMWORLD_DIR="$bare"
+
+    run "$SCRIPT"
+
+    [ "$status" -ne 0 ]
+    # Name the path that was tried...
+    [[ "$output" == *"$bare"* ]]
+    # ...and say how to fix it. A bare `ln` failure satisfies the check above
+    # by accident, so this is what actually demands a deliberate guard.
+    [[ "$output" == *"RIMWORLD_DIR"* ]]
+}

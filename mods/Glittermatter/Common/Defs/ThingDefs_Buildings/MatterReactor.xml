@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <ThingDef ParentName="BuildingBase">
+    <defName>MatterReactor</defName>
+    <label>matter reactor</label>
+    <description>A seed of glittermatter, powered and directed. Its molecular machines grow a network of leaching tunnels through the rock below, dissolve whatever useful elements they find, and carry them back to be built into more of themselves.
+
+It is neither fast nor efficient. It simply never stops, and it never asks anyone to do the work.</description>
+    <graphicData>
+      <texPath>Things/Building/MatterReactor</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(1,1)</drawSize>
+    </graphicData>
+    <size>(1,1)</size>
+    <rotatable>false</rotatable>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>Impassable</passability>
+    <fillPercent>1.0</fillPercent>
+    <canOverlapZones>false</canOverlapZones>
+    <tickerType>Normal</tickerType>
+    <designationCategory>Production</designationCategory>
+    <terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
+    <researchPrerequisites>
+      <li>GlittermatterAdaptation</li>
+    </researchPrerequisites>
+    <!-- Glittermatter in the cost list is the bootstrap rule: a reactor is the
+         only source of glittermatter, so the first one must be bought or
+         looted. Removing this makes the mod self-starting. -->
+    <costList>
+      <Steel>100</Steel>
+      <ComponentSpacer>1</ComponentSpacer>
+      <Glittermatter>150</Glittermatter>
+    </costList>
+    <statBases>
+      <MaxHitPoints>120</MaxHitPoints>
+      <WorkToBuild>3000</WorkToBuild>
+      <Flammability>0</Flammability>
+      <Beauty>-4</Beauty>
+      <Mass>20</Mass>
+    </statBases>
+    <thingCategories>
+      <li>BuildingsSpecial</li>
+    </thingCategories>
+    <minifiedDef>MinifiedThing</minifiedDef>
+    <tradeability>All</tradeability>
+    <comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>500</basePowerConsumption>
+      </li>
+      <li Class="CompProperties_Breakdownable"/>
+      <li Class="CompProperties_Flickable"/>
+      <li Class="CompProperties_Spawner">
+        <thingToSpawn>Glittermatter</thingToSpawn>
+        <spawnCount>25</spawnCount>
+        <!-- 240000 ticks = 4 in-game days, so 6.25/day per tile at 500W.
+             Scale by building more; the reactor is 1x1 on purpose. -->
+        <spawnIntervalRange><min>240000</min><max>240000</max></spawnIntervalRange>
+        <requiresPower>true</requiresPower>
+        <writeTimeLeftToSpawn>true</writeTimeLeftToSpawn>
+        <!-- Pauses a reactor whose output nobody is hauling, so a sixteen-tile
+             farm cannot carpet its room. Drop this if the pause proves more
+             irritating than the pile. -->
+        <spawnMaxAdjacent>150</spawnMaxAdjacent>
+      </li>
+    </comps>
+  </ThingDef>
+
+</Defs>

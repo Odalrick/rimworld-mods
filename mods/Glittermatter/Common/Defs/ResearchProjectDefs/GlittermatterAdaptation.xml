@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <ResearchProjectDef>
+    <defName>GlittermatterAdaptation</defName>
+    <label>glittermatter adaptation</label>
+    <description>Glittermatter is not one machine but thousands of designs, each suited to elements that happen to be abundant somewhere. A techprint carries that design library. Adapting it to the rock under your feet is the work; the control transmitters themselves are simple once you hold the programs.</description>
+    <baseCost>2000</baseCost>
+    <techLevel>Spacer</techLevel>
+    <prerequisites>
+      <li>Electricity</li>
+    </prerequisites>
+    <!-- The techprint is the gate. No research bench requirement on top of it.
+         Outlander is a Core faction tag and Core trader kinds already run
+         StockGenerator_Techprints, so this adds no Royalty dependency. -->
+    <techprintCount>1</techprintCount>
+    <techprintCommonality>3</techprintCommonality>
+    <techprintMarketValue>3000</techprintMarketValue>
+    <heldByFactionCategoryTags>
+      <li>Outlander</li>
+    </heldByFactionCategoryTags>
+    <researchViewX>9.00</researchViewX>
+    <researchViewY>4.20</researchViewY>
+  </ResearchProjectDef>
+
+</Defs>

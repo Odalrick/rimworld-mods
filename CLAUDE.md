@@ -19,6 +19,11 @@ under `/home/<user>`, or anything else tying the repo to one machine. That is
 why `.envrc` is gitignored and `.envrc.example` is not: the example uses
 `$HOME`, the real one may not.
 
+**Stage explicit paths. Never `git add -A` or `git add .`** — `.idea/` was
+committed to this repo exactly that way, before `.gitignore` existed, and a
+blanket add is how third-party art or a stray local file ends up published.
+Ludeon's textures are copyrighted and must never enter this repo.
+
 ## Commands
 
 ```sh

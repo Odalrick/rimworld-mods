@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <ThingDef ParentName="ResourceBase">
+    <defName>Glittermatter</defName>
+    <label>glittermatter</label>
+    <description>A mass of programmable nanomachines, dull grey and flecked with silver — fused remnants of micromachines spent in earlier work. Directed by a simple transmitter, it flows into place and hardens of its own accord, expending the energy a matter reactor imparted to it.
+
+Structurally excellent and almost instant to build with. It makes poor armour, indifferent weapons, and nothing anyone would call beautiful. On the glitterworlds, it is packing material.</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/Glittermatter</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <soundInteract>Metal_Drop</soundInteract>
+    <soundDrop>Metal_Drop</soundDrop>
+    <useHitPoints>false</useHitPoints>
+    <healthAffectsPrice>false</healthAffectsPrice>
+    <burnableByRecipe>false</burnableByRecipe>
+    <smeltable>false</smeltable>
+    <!-- Too bulky per unit of value to be worth shipping. Nobody trades it. -->
+    <tradeability>None</tradeability>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <statBases>
+      <MarketValue>1.5</MarketValue>
+      <Mass>0.3</Mass>
+      <Flammability>0</Flammability>
+      <StuffPower_Armor_Sharp>0.45</StuffPower_Armor_Sharp>
+      <StuffPower_Armor_Blunt>0.25</StuffPower_Armor_Blunt>
+      <StuffPower_Armor_Heat>0.30</StuffPower_Armor_Heat>
+      <StuffPower_Insulation_Cold>3</StuffPower_Insulation_Cold>
+      <StuffPower_Insulation_Heat>0</StuffPower_Insulation_Heat>
+      <SharpDamageMultiplier>0.5</SharpDamageMultiplier>
+      <BluntDamageMultiplier>0.8</BluntDamageMultiplier>
+    </statBases>
+    <thingCategories>
+      <li>ResourcesRaw</li>
+    </thingCategories>
+    <stuffProps>
+      <stuffAdjective>glittermatter</stuffAdjective>
+      <categories>
+        <li>Woody</li>
+        <li>Stony</li>
+        <li>Metallic</li>
+      </categories>
+      <appearance>Metal</appearance>
+      <!-- Never chosen for randomly generated items; a reactor is the only source. -->
+      <commonality>0</commonality>
+      <allowedInStuffGeneration>false</allowedInStuffGeneration>
+      <constructEffect>ConstructMetal</constructEffect>
+      <isAirtight>true</isAirtight>
+      <color>(150,150,155)</color>
+      <soundImpactBullet>BulletImpact_Metal</soundImpactBullet>
+      <soundMeleeHitSharp>MeleeHit_Metal_Sharp</soundMeleeHitSharp>
+      <soundMeleeHitBlunt>MeleeHit_Metal_Blunt</soundMeleeHitBlunt>
+      <soundImpactMelee>Pawn_Melee_Punch_HitBuilding_Metal</soundImpactMelee>
+      <statFactors>
+        <MaxHitPoints>1.4</MaxHitPoints>
+        <Beauty>0.9</Beauty>
+        <Flammability>0</Flammability>
+        <!-- The transmitter guides bulk material into structural shapes, so
+             construction is near-instant. WorkToMake is deliberately absent
+             (i.e. 1.0): shaping a sculpture still needs an artisan's hands.
+             Reducing it here would give ~3.5x the sculpture output of wood at
+             unchanged market value, because art is work-bound rather than
+             material-bound. Fast crafting belongs to the future glittermatter
+             workbench, not to the stuff itself. -->
+        <WorkToBuild>0.2</WorkToBuild>
+        <DoorOpenSpeed>1.2</DoorOpenSpeed>
+      </statFactors>
+    </stuffProps>
+  </ThingDef>
+
+</Defs>

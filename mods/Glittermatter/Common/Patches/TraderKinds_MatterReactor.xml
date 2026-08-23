@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+  <!-- Follows the vanilla Telescope pattern: a StockGenerator_SingleDef with
+       countRange 0~1 on exotic traders only. Deliberately not on
+       Base_Outlander_Standard — a reactor is exotic stock, not general goods.
+
+       A wrong xpath here fails silently at load: RimWorld logs it and carries
+       on, so the only real check is looking at trader stock in game. -->
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/TraderKindDef[defName="Orbital_Exotic"]/stockGenerators</xpath>
+    <value>
+      <li Class="StockGenerator_SingleDef">
+        <thingDef>MatterReactor</thingDef>
+        <countRange>0~1</countRange>
+      </li>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/TraderKindDef[defName="Caravan_Outlander_Exotic"]/stockGenerators</xpath>
+    <value>
+      <li Class="StockGenerator_SingleDef">
+        <thingDef>MatterReactor</thingDef>
+        <countRange>0~1</countRange>
+      </li>
+    </value>
+  </Operation>
+
+</Patch>

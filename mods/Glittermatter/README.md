@@ -3,7 +3,8 @@
 A RimWorld mod about what happens when a colony gets hold of the disposable
 mass-production technology of a civilization vastly more advanced than itself.
 
-> **Status: outline.** Nothing playable yet. Targets RimWorld 1.6.
+> **Status: v1 implemented, awaiting in-game verification.** The material
+> and the reactor exist; textures are placeholders. Targets RimWorld 1.6.
 
 ## Elevator pitch
 
@@ -47,8 +48,9 @@ The overall design principle is:
 
 | Piece | Role | Implementation |
 | --- | --- | --- |
-| Glittermatter | Universal `Woody`/`Stony`/`Metallic` stuff. Nonflammable, fast to build with, mediocre at everything. | XML |
-| Matter Reactor | Power + ambient matter + seed glittermatter → bulk glittermatter. Bootstrapped, then renewable. | XML |
+| Glittermatter | Universal `Woody`/`Stony`/`Metallic` stuff. Nonflammable, strong, fastest thing in the game to build with, poor armour, plain. | **done** |
+| Matter Reactor | 1×1, 500 W, 6.25 glittermatter/day. Scale by building more. | **done** |
+| Glittermatter workbench | Where "fast to make" lives — the stuff itself crafts at normal speed. | XML |
 | Matter Fabricator | Researched designs → standardized equipment. Standard / Precision / Master patterns. | XML |
 | Smartmatter | Partially flexible form. Self-maintaining, thermoregulating clothing. | XML |
 | Composites | Glittermatter alloyed with scarce materials (plasteel, gold). | XML |
@@ -58,12 +60,11 @@ The overall design principle is:
 
 Rough ordering, not a commitment.
 
-1. **The material.** Glittermatter as a stuff, and a primitive way to obtain
-   it. This alone is a playable mod: a generic building material that is
-   never optimal and always available.
-2. **The reactor.** Bulk production, and the research and bootstrap cost that
-   gate it. This is where glittermatter stops being a curiosity and starts
-   being infrastructure.
+1. ~~**The material and the reactor.**~~ Shipped as v1. These could not be
+   separated: a reactor is the only source of glittermatter, so a
+   material-only release would have shipped something unobtainable.
+2. **The workbench.** Fast crafting, gated behind a building rather than
+   granted by the stuff.
 3. **The fabricator.** Standard, then Precision, then Master patterns. Turns
    the mod from a material into a manufacturing tree.
 4. **Smartmatter and composites.** Apparel and the scarce-material alloys.
@@ -89,12 +90,12 @@ Verified against RimWorld 1.6.4871, not recalled:
 
 ## Open questions
 
-- Is "ambient matter" a real consumed resource, or flavour on the reactor's
-  power draw?
-- Does the reactor produce autonomously, or through bills at a workbench? A
-  bill-driven reactor is pure XML; an autonomous one needs a comp, and
-  therefore C#.
 - One ThingDef per weapon per pattern tier multiplies quickly. Which weapons
   are actually worth fabricating?
-- What anchors the balance — how much cheaper and faster than the
-  purpose-made material is "good enough for almost anything, right now"?
+- Reactor output, power draw and build cost are first-pass numbers. They want
+  play testing, not more arithmetic.
+
+Answered in v1: the reactor produces autonomously via stock
+`CompProperties_Spawner` — no C# needed. "Ambient matter" is flavour on the
+power draw; the reactor's machines leach elements from the rock below, which
+costs power and nothing else.

@@ -1,5 +1,5 @@
 .DEFAULT_GOAL := help
-.PHONY: help check
+.PHONY: help check link test
 
 help: ## List available targets
 	@grep -hE '^[a-zA-Z0-9_-]+:.*?## ' $(MAKEFILE_LIST) \
@@ -9,3 +9,9 @@ help: ## List available targets
 check: ## Validate all mod XML
 	@find mods -name '*.xml' -print0 | xargs -0 -r xmllint --noout
 	@echo "XML OK"
+
+link: ## Symlink every mod into RimWorld's Mods/ directory
+	@bin/link-mods.sh
+
+test: ## Run the tests
+	@bats tests/

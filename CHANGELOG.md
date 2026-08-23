@@ -13,5 +13,12 @@ that is `0.x`.
 
 - Monorepo scaffold: a `make`-driven task runner, XML validation, and a
   script that symlinks mods into the game directory.
-- Glittermatter mod skeleton — metadata and design outline only, nothing
-  playable yet.
+- **Glittermatter**: the glittermatter material — a single stuff serving the
+  `Woody`, `Stony` and `Metallic` categories, untradeable, nonflammable,
+  structurally strong and by far the fastest material in the game to build
+  with, at the cost of poor armour and plain looks.
+- **Glittermatter**: the matter reactor — a 1×1 building producing 6.25
+  glittermatter per day for 500 W, scaled by building more of them.
+- **Glittermatter**: techprint-gated *glittermatter adaptation* research,
+  which unlocks building reactors but cannot produce the first one.
+- **Glittermatter**: matter reactors appear in exotic trader stock.

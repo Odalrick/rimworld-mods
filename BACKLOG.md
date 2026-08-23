@@ -26,3 +26,19 @@ the reason stops holding.
 
 - **Start-page bookmark and PR-dashboard repo icon** — from the new-project
   checklist. Deferred until there is something worth linking to.
+
+- **Glittermatter should not be recoverable when deconstructed** — all stored
+  energy is spent hardening it in place, so there should be nothing left to
+  reclaim. Needs a Harmony patch on `RimWorld.GenLeaving`;
+  `resourcesFractionWhenDeconstructed` lives on `BuildableDef` and
+  `StuffProperties` has no per-stuff equivalent. Requires a .NET SDK, which is
+  not installed.
+
+- **Real Glittermatter textures** — the PNGs under
+  `mods/Glittermatter/Common/Textures/` are generated placeholders and are
+  deliberately untracked, so a cloner sees missing-texture errors. Ludeon's own
+  textures are packed in Unity bundles and are copyrighted; they must never be
+  committed here. Must be closed before publishing.
+
+- **Reactor balance** — output rate, power draw and build cost are all
+  first-pass. They want play testing rather than arithmetic.

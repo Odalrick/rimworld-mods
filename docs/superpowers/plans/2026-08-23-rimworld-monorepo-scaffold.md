@@ -17,6 +17,7 @@ Spec: `docs/superpowers/specs/2026-08-23-rimworld-monorepo-design.md`
 | File | Responsibility |
 | --- | --- |
 | `.gitignore` | Local-only paths and editor noise. Deliberately does *not* ignore `PublishedFileId.txt`. |
+| `.envrc.example` | Documents `RIMWORLD_DIR` for direnv. The real `.envrc` is gitignored. |
 | `LICENSE` | MIT, `Copyright (c) 2026 Odalrick`. |
 | `Makefile` | The only entry point. Self-documenting via `##` annotations; owns no logic beyond one-liners. |
 | `bin/link-mods.sh` | Symlinks `mods/*` into the game. Idempotent, refuses to clobber real directories. Owns the `RIMWORLD_DIR` default. |
@@ -38,14 +39,18 @@ Spec: `docs/superpowers/specs/2026-08-23-rimworld-monorepo-design.md`
 
 **Files:**
 - Create: `.gitignore`
+- Create: `.envrc.example`
 - Create: `LICENSE`
+- Create (untracked): `.envrc`
 
 - [ ] **Step 1: Write `.gitignore`**
 
 ```gitignore
-# Local-only
+# Local-only. .envrc holds a machine-specific RimWorld path;
+# copy .envrc.example and edit it.
 tmp/
 .locked-branches
+.envrc
 
 # Editor noise
 .idea/
@@ -55,6 +60,28 @@ tmp/
 # NOTE: mods/*/About/PublishedFileId.txt is deliberately NOT ignored.
 # It is the Steam Workshop item identity and is required to publish updates.
 ```
+
+- [ ] **Step 1b: Write `.envrc.example`**
+
+```bash
+# Copy to .envrc and run: direnv allow
+#
+# Where RimWorld is installed. Only needed when it is somewhere other than
+# the default bin/link-mods.sh assumes:
+#   ${XDG_DATA_HOME:-$HOME/.local/share}/Steam/steamapps/common/RimWorld
+# A second Steam library on another drive is the usual reason.
+export RIMWORLD_DIR="$HOME/.local/share/Steam/steamapps/common/RimWorld"
+```
+
+Then create the local copy and enable it:
+
+```bash
+cp .envrc.example .envrc
+direnv allow
+```
+
+Expected: direnv reports loading `RIMWORLD_DIR`, and `git status --porcelain`
+does not list `.envrc`.
 
 - [ ] **Step 2: Write `LICENSE`**
 
@@ -69,8 +96,8 @@ Expected: no tracked file appears. `tmp/` does not exist yet, so the list should
 - [ ] **Step 4: Commit**
 
 ```bash
-git add .gitignore LICENSE
-git commit -m "chore(repo): add gitignore and MIT licence"
+git add .gitignore .envrc.example LICENSE
+git commit -m "chore(repo): add gitignore, direnv example and MIT licence"
 ```
 
 ### Task 2: Makefile with a self-documenting help target

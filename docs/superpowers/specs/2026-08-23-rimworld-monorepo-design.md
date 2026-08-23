@@ -62,6 +62,7 @@ Also observed: files whose names begin with `.` or `._` are skipped, so
 ```
 <repo root>
 ├── .gitignore
+├── .envrc.example
 ├── CLAUDE.md
 ├── README.md
 ├── CHANGELOG.md
@@ -158,6 +159,11 @@ annotation style already used in `quick-portraits` and `yog-sothoth`, with the
 | `make link` | Symlink every mod into the game's `Mods/` |
 | `make check` | Validate all mod XML |
 | `make test` | Run the shell tests |
+
+`RIMWORLD_DIR` is the only environment variable anything reads, and the
+default already resolves on a standard Steam install. A committed
+`.envrc.example` documents it for direnv; the real `.envrc` is gitignored,
+because it holds a machine-specific absolute path and this is a public repo.
 
 Logic lives in a script only when it is worth testing on its own.
 `bin/link-mods.sh` earns that; XML validation is a single `xmllint`

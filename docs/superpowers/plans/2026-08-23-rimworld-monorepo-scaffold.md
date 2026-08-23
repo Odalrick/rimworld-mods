@@ -717,7 +717,7 @@ Sections, in order:
 
 - [ ] **Step 2: Verify no leaked identifiers**
 
-Run: `grep -rn "/home/ulrik\|addcomply\|ulrik.langstrom" . --exclude-dir=.git || echo clean`
+Run: `grep -rniF -e "$HOME" -e "$(git config --global user.name)" . --exclude-dir=.git || echo clean`
 Expected: `clean`.
 
 - [ ] **Step 3: Commit**
@@ -760,7 +760,7 @@ Step 2 — it is outward-facing and cannot be quietly undone.**
 
 ```bash
 make check && make test
-grep -rn "/home/ulrik\|addcomply\|ulrik.langstrom" . --exclude-dir=.git || echo clean
+grep -rniF -e "$HOME" -e "$(git config --global user.name)" . --exclude-dir=.git || echo clean
 git log --format='%an <%ae>' | sort -u
 git status --porcelain
 ```

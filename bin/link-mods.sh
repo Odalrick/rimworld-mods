@@ -5,6 +5,8 @@ repo_root="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 rimworld_dir="${RIMWORLD_DIR:-${XDG_DATA_HOME:-$HOME/.local/share}/Steam/steamapps/common/RimWorld}"
 mods_dir="$rimworld_dir/Mods"
 
+blocked=0
+
 for source in "$repo_root"/mods/*/; do
     source="${source%/}"
     name="$(basename "$source")"
@@ -22,9 +24,17 @@ for source in "$repo_root"/mods/*/; do
         continue
     fi
 
+    if [[ -e $target ]]; then
+        echo "blocked  $name — $target exists and is not a symlink" >&2
+        blocked=1
+        continue
+    fi
+
     # -n keeps ln from following an existing symlink-to-a-directory and
-    # creating the link inside it. The branch above already prevents that
+    # creating the link inside it. The branches above already prevent that
     # case; -n makes the mistake loud rather than silent if it recurs.
     ln -sn "$source" "$target"
     echo "linked   $name"
 done
+
+exit $blocked

@@ -62,3 +62,20 @@ mod_names() {
 
     [ "$(readlink "$FIXTURE/Mods/$name")" = "$REPO_ROOT/mods/$name" ]
 }
+
+@test "refuses to clobber a real directory" {
+    local name
+    name="$(mod_names | head -1)"
+    mkdir -p "$FIXTURE/Mods/$name"
+    printf 'precious' > "$FIXTURE/Mods/$name/hand-installed.txt"
+
+    run "$SCRIPT"
+
+    # The important half: the directory survives untouched. Checking only
+    # that the file still exists is not enough — ln happily creates the link
+    # *inside* a real directory, leaving the original contents in place.
+    [ "$(ls -A "$FIXTURE/Mods/$name")" = "hand-installed.txt" ]
+    # And the problem is reported rather than scrolling past.
+    [ "$status" -ne 0 ]
+    [[ "$output" == *"$name"* ]]
+}

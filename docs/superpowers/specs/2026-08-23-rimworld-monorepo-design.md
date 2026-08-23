@@ -71,7 +71,7 @@ Also observed: files whose names begin with `.` or `._` are skipped, so
 ├── bin/
 │   └── link-mods.sh
 ├── tests/
-│   └── link-mods_test.sh
+│   └── link-mods.bats
 ├── docs/
 │   └── superpowers/specs/
 └── mods/
@@ -199,11 +199,16 @@ is verified by deliberately corrupting an XML file and confirming a non-zero
 exit — not by observing that it passes.
 
 `bin/link-mods.sh` has real logic — idempotency, and refusing to clobber a
-real directory — so it gets tests. `tests/link-mods_test.sh` runs it against a
-throwaway `RIMWORLD_DIR` and asserts each behaviour, run via `make test`.
-Plain shell with no framework: `bats` is not installed and pulling in a system
-package for two scripts is not yet worth it. Recorded in `BACKLOG.md` along
-with `shellcheck`, which is also absent, and which `make lint` would need.
+real directory — so it gets tests. `tests/link-mods.bats` runs it against a
+throwaway `RIMWORLD_DIR` and asserts each behaviour, via `make test`.
+
+Tests use **bats** (`extra/bats`, installed as a system package). No helper
+libraries: plain `[[ ]]` assertions against bats' `$status` and `$output` are
+enough for five tests, and `bats-support`/`bats-assert` are not packaged.
+
+`shellcheck` is not installed. A `make lint` target needs it, and both are
+recorded in `BACKLOG.md`; a lint target that silently no-ops when the linter
+is absent would be worse than none.
 
 **Manual acceptance gate.** RimWorld loads with the mod enabled and dev mode
 on, producing zero red errors in the log. This is the real test.

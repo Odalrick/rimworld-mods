@@ -202,8 +202,10 @@ faster; stone costs labour.
 sixteen-tile farm cannot carpet its room. Vanilla's chemreactor omits this;
 drop it if the pause proves more annoying than the pile.
 
-First-pass build cost, to be tuned: `Steel 100`, `ComponentSpacer 3`,
-`Glittermatter 150` — about 24 tile-days to repay itself.
+First-pass build cost, to be tuned: `Steel 100`, `ComponentSpacer 1`
+(one advanced component), `Glittermatter 150` — about 24 tile-days to repay
+itself. A single advanced component per tile still means sixteen of them for a
+100/day farm, which is the real gate; vanilla buildings range 1–8.
 
 ## Acquisition
 
@@ -233,9 +235,13 @@ Research `GlittermatterAdaptation` unlocks *building* reactors:
 <heldByFactionCategoryTags><li>Outlander</li></heldByFactionCategoryTags>
 ```
 
-with `MultiAnalyzer` required and a `Spacer`-tier cost. The research is
-adapting the nanomachine design library to local geology — which is why owning
-a reactor does not, by itself, let you make another.
+`Spacer` tech level, `Electricity` as the only prerequisite, a modest
+`baseCost` around 2000, and **no `requiredResearchFacilities`**. The techprint
+is the gate; the work behind it is not hard. The control transmitters are
+simple once you hold the control programs — what you are buying with the
+techprint is the adapted nanomachine design library, not the ability to build a
+radio. This is also why owning a reactor does not, by itself, let you make
+another.
 
 ## Textures
 

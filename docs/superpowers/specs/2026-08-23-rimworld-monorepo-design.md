@@ -67,9 +67,11 @@ Also observed: files whose names begin with `.` or `._` are skipped, so
 ├── CHANGELOG.md
 ├── BACKLOG.md
 ├── LICENSE
+├── Makefile
 ├── bin/
-│   ├── link-mods.sh
-│   └── check-xml.sh
+│   └── link-mods.sh
+├── tests/
+│   └── link-mods_test.sh
 ├── docs/
 │   └── superpowers/specs/
 └── mods/
@@ -143,6 +145,25 @@ Rejected alternatives: an `rsync` deploy script (adds a step to every
 iteration and invites editing a stale copy) and hosting the repo inside the
 game's `Mods/` directory (a Steam file-verify or reinstall can wipe it).
 
+### Task runner
+
+`make` is the entry point for everything. Bare `make` prints the available
+targets, scraped from `## Description` annotations on each target — the
+annotation style already used in `quick-portraits` and `yog-sothoth`, with the
+`help` target those repos are missing.
+
+| Target | Does |
+| --- | --- |
+| `make` / `make help` | List targets |
+| `make link` | Symlink every mod into the game's `Mods/` |
+| `make check` | Validate all mod XML |
+| `make test` | Run the shell tests |
+
+Logic lives in a script only when it is worth testing on its own.
+`bin/link-mods.sh` earns that; XML validation is a single `xmllint`
+invocation and stays inline in its recipe rather than becoming a wrapper
+script that does nothing.
+
 ### `bin/link-mods.sh`
 
 - Resolves the game directory from `$RIMWORLD_DIR`, defaulting to
@@ -167,15 +188,22 @@ wrapper script.
 There is no test harness for RimWorld XML defs — the game is the runtime.
 Stating that plainly rather than pretending otherwise:
 
-**Automated.** `bin/check-xml.sh` runs `xmllint --noout` over all XML under
+**Automated.** `make check` runs `xmllint --noout` over all XML under
 `mods/`, exiting non-zero on failure. It catches malformed XML in about a
 second, before the game is ever launched. Its limit is real: it validates
 syntax only. It cannot tell that a `<thingDef>` references a def that does not
 exist.
 
 Per the standing rule that passing tests are not evidence of coverage, this
-script is verified by deliberately corrupting an XML file and confirming a
-non-zero exit — not by observing that it passes.
+is verified by deliberately corrupting an XML file and confirming a non-zero
+exit — not by observing that it passes.
+
+`bin/link-mods.sh` has real logic — idempotency, and refusing to clobber a
+real directory — so it gets tests. `tests/link-mods_test.sh` runs it against a
+throwaway `RIMWORLD_DIR` and asserts each behaviour, run via `make test`.
+Plain shell with no framework: `bats` is not installed and pulling in a system
+package for two scripts is not yet worth it. Recorded in `BACKLOG.md` along
+with `shellcheck`, which is also absent, and which `make lint` would need.
 
 **Manual acceptance gate.** RimWorld loads with the mod enabled and dev mode
 on, producing zero red errors in the log. This is the real test.

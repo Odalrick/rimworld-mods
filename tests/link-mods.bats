@@ -52,3 +52,13 @@ mod_names() {
     after="$(find "$REPO_ROOT/mods" | sort)"
     [ "$before" = "$after" ]
 }
+
+@test "repoints a stale symlink" {
+    local name
+    name="$(mod_names | head -1)"
+    ln -s /nonexistent/elsewhere "$FIXTURE/Mods/$name"
+
+    run "$SCRIPT"
+
+    [ "$(readlink "$FIXTURE/Mods/$name")" = "$REPO_ROOT/mods/$name" ]
+}

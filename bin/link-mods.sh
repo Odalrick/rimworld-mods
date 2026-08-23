@@ -15,6 +15,13 @@ for source in "$repo_root"/mods/*/; do
         continue
     fi
 
+    if [[ -L $target ]]; then
+        rm "$target"
+        ln -s "$source" "$target"
+        echo "relinked $name"
+        continue
+    fi
+
     # -n keeps ln from following an existing symlink-to-a-directory and
     # creating the link inside it. The branch above already prevents that
     # case; -n makes the mistake loud rather than silent if it recurs.

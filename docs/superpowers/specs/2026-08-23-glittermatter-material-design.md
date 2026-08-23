@@ -249,14 +249,15 @@ Vanilla textures are packed inside Unity asset bundles, not shipped as loose
 PNGs, and they are Ludeon's copyright — this repo is public and MIT, so they
 must not be committed regardless.
 
-Placeholders are therefore **generated**, written to the correct paths and
-dimensions, and left **untracked** for hand-editing:
+Placeholder art is therefore drawn by hand and committed under the same MIT
+licence as the rest of the repo:
 
 - `Common/Textures/Things/Item/Resource/Glittermatter.png`
 - `Common/Textures/Things/Building/MatterReactor.png`
 
-A cloner will see missing-texture errors until real art is committed. That is
-acceptable before publication and must be closed before it.
+Both are rough and dark; better art is wanted before publication, and is
+recorded in `BACKLOG.md`. A fresh clone renders rather than erroring, which is
+what matters for now.
 
 ## Testing
 

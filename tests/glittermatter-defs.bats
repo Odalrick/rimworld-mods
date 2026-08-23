@@ -7,6 +7,7 @@ setup() {
     REPO_ROOT="$(cd "$BATS_TEST_DIRNAME/.." && pwd)"
     DEFS="$REPO_ROOT/mods/Glittermatter/Common/Defs"
     ITEMS="$DEFS/ThingDefs_Items/Glittermatter.xml"
+    BUILDINGS="$DEFS/ThingDefs_Buildings/MatterReactor.xml"
 }
 
 # Evaluate an XPath expression against a def file.
@@ -30,4 +31,12 @@ xp() {
         run xp "count(/Defs/ThingDef[defName=\"Glittermatter\"]/stuffProps/categories/li[text()=\"$cat\"])" "$ITEMS"
         [ "$output" = "1" ]
     done
+}
+
+@test "the first reactor cannot be built" {
+    # The cost list contains glittermatter, and reactors are its only source.
+    # This one line is the entire bootstrap rule; without it the mod becomes
+    # self-starting and nothing in play would look wrong.
+    run xp 'count(/Defs/ThingDef[defName="MatterReactor"]/costList/Glittermatter)' "$BUILDINGS"
+    [ "$output" = "1" ]
 }

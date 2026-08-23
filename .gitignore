@@ -1,0 +1,13 @@
+# Local-only. .envrc holds a machine-specific RimWorld path;
+# copy .envrc.example and edit it.
+tmp/
+.locked-branches
+.envrc
+
+# Editor noise
+.idea/
+.vscode/
+*.swp
+
+# NOTE: mods/*/About/PublishedFileId.txt is deliberately NOT ignored.
+# It is the Steam Workshop item identity and is required to publish updates.

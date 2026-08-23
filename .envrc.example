@@ -1,0 +1,7 @@
+# Copy to .envrc and run: direnv allow
+#
+# Where RimWorld is installed. Only needed when it is somewhere other than
+# the default bin/link-mods.sh assumes:
+#   ${XDG_DATA_HOME:-$HOME/.local/share}/Steam/steamapps/common/RimWorld
+# A second Steam library on another drive is the usual reason.
+export RIMWORLD_DIR="$HOME/.local/share/Steam/steamapps/common/RimWorld"

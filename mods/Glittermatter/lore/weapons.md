@@ -341,11 +341,11 @@ have the sniper rifle's extensive targeting specialisation and does not try to m
 
 **Niche: extreme precision and range.** The weapon for the particular difficult target over there that needs shooting.
 
-| Pattern   | Weapon              | Character                                                |
-| --------- | ------------------- | -------------------------------------------------------- |
-| Standard  | Matter sniper rifle | Conventional matterformed sniper rifle.                  |
-| Precision | Beamrider rifle     | Laser-guided in-flight correction for extreme precision. |
-| Master    |                     |                                                          |
+| Pattern   | Weapon              | Character                                                         |
+| --------- | ------------------- | ----------------------------------------------------------------- |
+| Standard  | Matter sniper rifle | Conventional matterformed sniper rifle.                           |
+| Precision | Beamrider rifle     | Laser-guided in-flight correction for extreme precision.          |
+| Master    | Banshee             | Guided gyrojet rounds; screams all the way in, helpless up close. |
 
 ### Matter sniper rifle
 
@@ -356,6 +356,26 @@ The standard sniper niche produced cheaply and deterministically: long range, hi
 The rifle fires a laser at its own projectile. Selective heating or ablation steers the projectile in flight while the
 weapon's electronics track both projectile and target. The shooter still aims at the target; the correction system makes
 that difficult long-range shot substantially less difficult.
+
+### Banshee
+
+An evolution of gyrojet technology. Every round is a small rocket carrying its own guidance package: the rifle points,
+and the round flies itself the rest of the way. A guidance package per shot is the sort of expense only a matter
+fabricator makes casual.
+
+It screams on the way in. A motor burning all the way to the target is not quiet, and the sound arrives long before the
+round does. Anyone who has heard it once knows what it means, and what it means has already been decided. The marketing
+team did not have to work for this one.
+
+The catch is the same one gyrojets have always had: the round is still accelerating when it leaves the barrel. Up close
+the Banshee is feeble, and it is the line's trade taken to its limit — where the Prayer is for the thing already on top
+of you, the Banshee is no help to you whatsoever. Mechanically that is a minimum range, which vanilla verbs already
+support.
+
+In the description somewhere:
+
+> It started out as Probability Evaluating Neural Intelligence Subcritical Electro Navigating Vehicle; but that was
+> aborted as engineering limitations prohibited use of a technology beginning with "Y".
 
 ## Out of scope
 

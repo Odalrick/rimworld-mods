@@ -49,9 +49,10 @@ times the ammunition are the justification for the numbers rather than things to
 and cooldown in the table below.
 
 Calibre is a second axis and it is not locked to the first. An MMG may step up to the heavier rifle round rather than
-just carry more of the light one. The HMG's 12.7 is where it stops being an infantry weapon at all — effective against
-light vehicles, which here means mechanoids and power armour, so its identity is armour penetration rather than more of
-the same damage.
+just carry more of the light one. The HMG's 12.7 is where it stops being an infantry weapon at all, and it buys
+penetration and damage together rather than trading one for the other. Getting through the plate is not the whole of
+what a burst to the torso from an M2 does to the person wearing it. Effective against light vehicles, which here means
+mechanoids and power armour — and against everything softer, emphatically.
 
 ## The three states
 
@@ -137,12 +138,12 @@ same handgun problem from the other end, with a movement bonus; the two are comp
 
 ## The ladder
 
-| Weapon            | What it is                                                                    |
-| ----------------- | ----------------------------------------------------------------------------- |
-| **Assault rifle** | Mobile generalist                                                             |
-| **LMG**           | Mobile support weapon, increasingly effective braced and deployed             |
-| **MMG**           | Support weapon wanting a prepared position, or at least something to brace on |
-| **HMG**           | Stationary weapon you can carry somewhere else; once deployed, answers armour |
+| Weapon            | What it is                                                                                                          |
+| ----------------- | ------------------------------------------------------------------------------------------------------------------- |
+| **Assault rifle** | Mobile generalist                                                                                                   |
+| **LMG**           | Mobile support weapon, increasingly effective braced and deployed                                                   |
+| **MMG**           | Support weapon wanting a prepared position, or at least something to brace on                                       |
+| **HMG**           | Stationary weapon you can carry somewhere else; deployed, it goes through armour and through whoever was wearing it |
 
 The same trade — more firepower bought with more positional commitment — extends to the other family this came with:
 anti-materiel rifles, in light, medium and heavy.

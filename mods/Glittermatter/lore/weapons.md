@@ -36,13 +36,13 @@ remain at 100%. There is a big jump to Masterwork.
 And importantly, not Legendary. Legendary remains something genuinely exceptional that the deterministic fabrication
 system doesn't casually reproduce.
 
-The naming of the tiers also has a theme; Standard weapons are generally just some variation on Matter `<gun>`.
-Precision weapons are more about describing the technology or the _one obvious_ feature; and Master Pattern weapons are
-given fanciful names of legend.
+The naming of the tiers also has a theme, and the theme is how generic a name is allowed to be. Standard weapons are
+fully generic: some variation on Matter `<gun>`. Precision weapons are somewhat generic — named for the technology or
+the _one obvious_ feature, the way a catalogue names things. Master Pattern weapons are given fanciful names of legend,
+by a dedicated marketing team that spent three months deciding.
 
-A Precision name is what people call the thing, not what the fabricator calls it. The Thumper is officially a HESH
-launcher; it is called the Thumper because that is the noise it makes. Where the designation is what ends up on the def,
-it is because nobody has found the nickname yet.
+The Thumper is the exception. Officially it is a HESH launcher; it is called the Thumper because nobody knows what HESH
+is and it goes thump.
 
 ### Manufacturing costs
 
@@ -290,8 +290,7 @@ exceptional at none of them.
 
 ### LP assault rifle
 
-Short for liquid-propellant assault rifle, which is nobody's idea of a name — this is the Thumper's problem without the
-Thumper's solution, and the nickname is still missing.
+Short for liquid-propellant assault rifle, which is the whole of the name and meant to be.
 
 Uses liquid propellant, allowing the weapon to meter the charge rather than accepting a fixed cartridge load. The
 technology serves the assault-rifle niche rather than creating a gimmick: reliable, controllable general-purpose

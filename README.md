@@ -9,13 +9,16 @@ RimWorld mods by Odalrick, kept in one repo.
 
 ## AI use
 
-I use large language models for a lot of what goes into this repo. Rather than leave anyone guessing, here is where:
+The ideas are mine. The images and the text are generated with AI models, then edited by hand until they satisfy me.
+Rather than leave anyone guessing, here is where:
 
-- **Prose** — design documents, mod descriptions and this README are drafted with LLM assistance. The Glittermatter
-  elevator pitch was written with ChatGPT; the design specs in `docs/` were written with Claude Code.
+- **Prose** — design documents, lore, mod descriptions and this README are drafted with LLM assistance. The
+  Glittermatter elevator pitch and the weapon lines came from ChatGPT; the specs in `docs/` and most of `mods/*/lore/`
+  from Claude Code.
 - **Code and XML** — written with Claude Code, reviewed by me before it lands.
-- **Art** — none yet. The intention is that I draw the preview and any textures myself. If that changes and generated
-  art ships, this section will say so.
+- **Art** — generated with image models, then edited by hand. I had meant to draw it myself, and found I do not have the
+  interest to make anything passable. The placeholder PNGs in the repo today are neither drawn nor generated: a script
+  produced them, and they are due to be replaced.
 
 Everything here is something I chose to keep, and I'm answerable for it either way.
 

@@ -17,7 +17,8 @@ Deferred work, with the reason it was deferred. Entries move out of here when th
   its own right.
 
 - **AI-use disclosure in the Workshop description** — `README.md` carries one, but Workshop subscribers never see the
-  README. `About.xml`'s `<description>` needs a condensed version before publishing.
+  README. `About.xml`'s `<description>` needs a condensed version before publishing. It has to cover generated art now,
+  not only generated prose, which is the half a subscriber can actually see.
 
 - **Start-page bookmark and PR-dashboard repo icon** — from the new-project checklist. Deferred until there is something
   worth linking to.

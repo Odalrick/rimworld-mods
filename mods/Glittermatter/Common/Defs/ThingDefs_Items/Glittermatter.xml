@@ -2,7 +2,7 @@
 <Defs>
 
   <ThingDef ParentName="ResourceBase">
-    <defName>Glittermatter</defName>
+    <defName>Glittermatter_Raw</defName>
     <label>glittermatter</label>
     <description>A block of micromachines, gripping one another so that a person can carry them. They are insect-sized in the loosest sense — the shapes are whatever suits the ground, and legs and wings suit most of it. Directed by a simple transmitter, they let go, make their way to the work site, climb to where they are needed and dissolve into the structure, expending the energy a matter reactor imparted to them. The ones that run short of energy set where they stand: the silver flecks in a dull grey wall are legs, wings and eyes.
 

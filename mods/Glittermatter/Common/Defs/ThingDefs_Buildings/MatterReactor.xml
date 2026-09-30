@@ -2,7 +2,7 @@
 <Defs>
 
   <ThingDef ParentName="BuildingBase">
-    <defName>MatterReactor</defName>
+    <defName>Glittermatter_Reactor</defName>
     <label>matter reactor</label>
     <description>A seed of glittermatter, powered and directed. Its molecular machines grow a network of leaching tunnels through the rock below, dissolve whatever useful elements they find, and carry them back to be built into more of themselves.
 
@@ -22,7 +22,7 @@ It is neither fast nor efficient. It simply never stops, and it never asks anyon
     <designationCategory>Production</designationCategory>
     <terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
     <researchPrerequisites>
-      <li>GlittermatterAdaptation</li>
+      <li>Glittermatter_Adaptation</li>
     </researchPrerequisites>
     <!-- Glittermatter in the cost list is the bootstrap rule: a reactor is the
          only source of glittermatter, so the first one must be bought or
@@ -30,7 +30,7 @@ It is neither fast nor efficient. It simply never stops, and it never asks anyon
     <costList>
       <Steel>100</Steel>
       <ComponentSpacer>1</ComponentSpacer>
-      <Glittermatter>150</Glittermatter>
+      <Glittermatter_Raw>150</Glittermatter_Raw>
     </costList>
     <statBases>
       <MaxHitPoints>120</MaxHitPoints>
@@ -52,7 +52,7 @@ It is neither fast nor efficient. It simply never stops, and it never asks anyon
       <li Class="CompProperties_Breakdownable"/>
       <li Class="CompProperties_Flickable"/>
       <li Class="CompProperties_Spawner">
-        <thingToSpawn>Glittermatter</thingToSpawn>
+        <thingToSpawn>Glittermatter_Raw</thingToSpawn>
         <spawnCount>25</spawnCount>
         <!-- 240000 ticks = 4 in-game days, so 6.25/day per tile at 500W.
              Scale by building more; the reactor is 1x1 on purpose. -->

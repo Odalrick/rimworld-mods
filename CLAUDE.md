@@ -71,6 +71,11 @@ Files whose names begin with `.` or `._` are skipped, so `.gitkeep` is inert.
   and spec of one piece of work, not for permanent fiction.
 - Prose is British English, in-game text included. RimWorld's own strings are American; that is the game's business, not
   this repo's, so do not "correct" mêlée, armour or colour to match it.
+- Def names are namespaced with the mod: `Glittermatter_Raw`, `Glittermatter_Reactor`, `Glittermatter_Banshee`. A
+  `defName` must be unique within its def type across every mod the player has loaded, so a bare `MatterReactor` is the
+  collision waiting to happen. `Verse.Def.AllowedDefNamesRegex` is `^[a-zA-Z0-9\-_]*$` — a hyphen would pass, but
+  vanilla uses none anywhere in `Data/`, so underscore, as in `Gun_BoltActionRifle`. Renaming a def after publishing
+  breaks existing saves; the names have to be right before the first Workshop upload.
 - `CHANGELOG.md` is maintained by hand. Deferred work goes in `BACKLOG.md` with the reason it was deferred.
 - `About/PublishedFileId.txt` is committed, never ignored — it is the Workshop item identity and updates need it.
 
@@ -79,8 +84,9 @@ Files whose names begin with `.` or `._` are skipped, so `.gitkeep` is inert.
 There is no test harness for RimWorld XML; the game is the runtime.
 
 - `make check` validates XML **syntax only**. It cannot catch a def that references a def which does not exist.
-- `make test` covers `bin/link-mods.sh`, which has logic worth testing — idempotency, and refusing to clobber a real
-  directory.
+- `make test` covers `bin/link-mods.sh` — idempotency, and refusing to clobber a real directory — and, in
+  `tests/glittermatter-defs.bats`, the def properties whose breakage is invisible during play. Those assert on
+  `defName`, so renaming a def turns them red; that is the point.
 - The real acceptance gate is loading the game with dev mode on and seeing no red errors in `Player.log`.
 
 A green `make check` means nothing until you have seen it go red. When adding a check, break the thing it guards and

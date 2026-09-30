@@ -12,7 +12,7 @@
     <xpath>/Defs/TraderKindDef[defName="Orbital_Exotic"]/stockGenerators</xpath>
     <value>
       <li Class="StockGenerator_SingleDef">
-        <thingDef>MatterReactor</thingDef>
+        <thingDef>Glittermatter_Reactor</thingDef>
         <countRange>0~1</countRange>
       </li>
     </value>
@@ -22,7 +22,7 @@
     <xpath>/Defs/TraderKindDef[defName="Caravan_Outlander_Exotic"]/stockGenerators</xpath>
     <value>
       <li Class="StockGenerator_SingleDef">
-        <thingDef>MatterReactor</thingDef>
+        <thingDef>Glittermatter_Reactor</thingDef>
         <countRange>0~1</countRange>
       </li>
     </value>

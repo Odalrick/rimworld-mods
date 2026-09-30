@@ -44,6 +44,10 @@ by a dedicated marketing team that spent three months deciding.
 The Thumper is the exception. Officially it is a HESH launcher; it is called the Thumper because nobody knows what HESH
 is and it goes thump.
 
+These are the names people use. What the game calls them is a separate, duller question — def names are namespaced with
+the mod, so the Banshee is `Glittermatter_Banshee`, because a def name has to be unique across every mod the player has
+loaded. The repo's `CLAUDE.md` holds the rule.
+
 ### Manufacturing costs
 
 Generally replace the steel price of the vanilla counterpart with glittermatter; Precision and Master can require more

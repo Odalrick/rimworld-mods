@@ -16,19 +16,19 @@ xp() {
 }
 
 @test "glittermatter cannot be traded" {
-    run xp 'string(/Defs/ThingDef[defName="Glittermatter"]/tradeability)' "$ITEMS"
+    run xp 'string(/Defs/ThingDef[defName="Glittermatter_Raw"]/tradeability)' "$ITEMS"
     [ "$output" = "None" ]
 }
 
 @test "glittermatter is excluded from generated items" {
-    run xp 'string(/Defs/ThingDef[defName="Glittermatter"]/stuffProps/allowedInStuffGeneration)' "$ITEMS"
+    run xp 'string(/Defs/ThingDef[defName="Glittermatter_Raw"]/stuffProps/allowedInStuffGeneration)' "$ITEMS"
     [ "$output" = "false" ]
 }
 
 @test "glittermatter serves all three rigid stuff categories" {
     local cat
     for cat in Woody Stony Metallic; do
-        run xp "count(/Defs/ThingDef[defName=\"Glittermatter\"]/stuffProps/categories/li[text()=\"$cat\"])" "$ITEMS"
+        run xp "count(/Defs/ThingDef[defName=\"Glittermatter_Raw\"]/stuffProps/categories/li[text()=\"$cat\"])" "$ITEMS"
         [ "$output" = "1" ]
     done
 }
@@ -37,6 +37,6 @@ xp() {
     # The cost list contains glittermatter, and reactors are its only source.
     # This one line is the entire bootstrap rule; without it the mod becomes
     # self-starting and nothing in play would look wrong.
-    run xp 'count(/Defs/ThingDef[defName="MatterReactor"]/costList/Glittermatter)' "$BUILDINGS"
+    run xp 'count(/Defs/ThingDef[defName="Glittermatter_Reactor"]/costList/Glittermatter_Raw)' "$BUILDINGS"
     [ "$output" = "1" ]
 }

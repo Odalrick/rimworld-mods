@@ -2,7 +2,7 @@
 <Defs>
 
   <ResearchProjectDef>
-    <defName>GlittermatterAdaptation</defName>
+    <defName>Glittermatter_Adaptation</defName>
     <label>glittermatter adaptation</label>
     <description>Glittermatter is not one machine but thousands of designs, each suited to elements that happen to be abundant somewhere. A techprint carries that design library. Adapting it to the rock under your feet is the work; the control transmitters themselves are simple once you hold the programs.</description>
     <baseCost>2000</baseCost>

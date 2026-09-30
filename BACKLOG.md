@@ -38,5 +38,12 @@ Deferred work, with the reason it was deferred. Entries move out of here when th
   the floor is not a production strategy. No vanilla comp destroys filth, so it needs a custom `ThingComp` and therefore
   a .NET SDK, which is not installed — the same blocker as the deconstruct patch.
 
+- **Where the source art lives** — three generated reference images (reactor, resource, shotgun line) are sitting in
+  `~/downloads` rather than the repo. When one is a keeper it goes in plain git, not LFS: 2.5MB across three files, and
+  git's trouble with binaries is churn rather than size. Deferred because they are drafts — the reactor still wants
+  scaling and darkening — and the rule is to commit the keeper, not the attempts. `art/<mod>/` at the repo root is the
+  intended home, which keeps them out of the mod folder, since that ships to the Workshop, and out of
+  `Common/Textures/`, since the game loads whatever it finds there into memory as a texture.
+
 - **Reactor balance** — output rate, power draw and build cost are all first-pass. They want play testing rather than
   arithmetic.

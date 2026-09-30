@@ -34,6 +34,12 @@ The overall design principle is:
 
 > **Glittermatter is rarely the best material for anything. It's very often the easiest material for everything.**
 
+## Lore
+
+This page is the pitch. The fiction itself — what the raw material physically is, how it builds, what the glitter is
+made of — lives in [`lore/`](lore/index.md), a file per concept. That folder is canonical; the in-game descriptions are
+its tightest retelling.
+
 ## Components
 
 | Piece                   | Role                                                                                                                           | Implementation    |

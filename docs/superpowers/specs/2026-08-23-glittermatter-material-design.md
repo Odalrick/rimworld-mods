@@ -25,6 +25,8 @@ Explicitly **not** in v1:
 
 ## Fiction
 
+Restated here because v1 depends on it. The canonical version lives in `mods/Glittermatter/lore/`.
+
 Glittermatter is the cheap plastic of the glitterworlds: a mass of programmable nanomachines that solidifies into almost
 any rigid structure.
 

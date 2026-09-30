@@ -66,6 +66,9 @@ Files whose names begin with `.` or `._` are skipped, so `.gitkeep` is inert.
 - Conventional commits. Scopes: `glittermatter`, `bin`, `docs`, `repo`. Each new mod adds its own scope.
 - Branches: `feat/` or `fix/` only. `main` is protected by the pre-commit hook symlinked into `.git/hooks/`.
 - Semver. `1.0.0` is reserved for the first Steam Workshop publish.
+- Lore lives in `mods/<Mod>/lore/` — an `index.md` and a file per concept — and is canonical. In-game descriptions and
+  the specs under `docs/` restate it; when they disagree, `lore/` is right and they are stale. `docs/` is for the plan
+  and spec of one piece of work, not for permanent fiction.
 - `CHANGELOG.md` is maintained by hand. Deferred work goes in `BACKLOG.md` with the reason it was deferred.
 - `About/PublishedFileId.txt` is committed, never ignored — it is the Workshop item identity and updates need it.
 

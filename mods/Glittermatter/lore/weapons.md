@@ -40,6 +40,10 @@ The naming of the tiers also has a theme; Standard weapons are generally just so
 Precision weapons are more about describing the technology or the _one obvious_ feature; and Master Pattern weapons are
 given fanciful names of legend.
 
+A Precision name is what people call the thing, not what the fabricator calls it. The Thumper is officially a HESH
+launcher; it is called the Thumper because that is the noise it makes. Where the designation is what ends up on the def,
+it is because nobody has found the nickname yet.
+
 ### Manufacturing costs
 
 Generally replace the steel price of the vanilla counterpart with glittermatter; Precision and Master can require more
@@ -62,11 +66,11 @@ First the targeted vanilla niches, with the weapon that represents each one and 
 | 8  | Chain shotgun  | Chain shotgun     | Close-range volume           | Trades reach for enormous short-range damage output; handles multiple/rapid targets better than pump   |
 | 9  | Assault rifle  | Assault rifle     | General-purpose rifle        | Good range, accuracy and automatic fire; deliberately broad applicability                              |
 | 10 | LMG            | LMG               | Sustained rifle-calibre fire | Volume of fire at useful rifle ranges; built to reward bracing and deployment                          |
-| 11 | Bolt-action    | Bolt-action rifle | General long-range rifle     | Accurate, powerful long-range shots without the extreme specialisation of a sniper rifle               |
+| 11 | DMR            | Bolt-action rifle | General long-range rifle     | Accurate, powerful long-range shots without the extreme specialisation of a sniper rifle               |
 | 12 | Sniper         | Sniper rifle      | Extreme precision/range      | Maximum ability to hit difficult targets at long distance, paid for with low rate of fire              |
 
 Line names default to the vanilla reference and are expected to drift off it — line 7 is the shotgun line and contains
-exactly one shotgun glittermatter weapon.
+exactly one shotgun glittermatter weapon, and line 11 is named for the job rather than for the bolt it no longer has.
 
 An alternate view of the same idea:
 
@@ -210,6 +214,9 @@ machine-pistol line, but still giving up rifle reach.
 
 ### Matter SMG
 
+Vanilla's "heavy" distinguishes it from nothing — the light SMG is the machine pistol — so the matter version drops the
+qualifier.
+
 The vanilla niche without embellishment: strong automatic fire at short to medium range, fabricated cheaply and
 consistently.
 
@@ -235,8 +242,8 @@ that is one of the weak vanilla weapons. Given the rest of the line, this is pro
 
 ### Thumper
 
-Closer to an M79, built around short-range HESH. Not a shotgun any more — the line is named for where it started, not
-for what it holds.
+Officially a HESH launcher. Closer to an M79, built around short-range HESH. Not a shotgun any more — the line is named
+for where it started, not for what it holds.
 
 ### Prayer
 
@@ -273,7 +280,7 @@ dominating a specialised weapon inside its speciality.
 | Pattern   | Weapon               | Character                                                          |
 | --------- | -------------------- | ------------------------------------------------------------------ |
 | Standard  | Matter assault rifle | Straightforward general-purpose matterformed rifle.                |
-| Precision | LP Assault           | Liquid-propellant rifle; controlled, tunable general-purpose fire. |
+| Precision | LP assault rifle     | Liquid-propellant rifle; controlled, tunable general-purpose fire. |
 | Master    |                      |                                                                    |
 
 ### Matter assault rifle
@@ -281,7 +288,10 @@ dominating a specialised weapon inside its speciality.
 The boring answer is intentional: a cheap, deterministic assault rifle that is good at most ordinary firefights and
 exceptional at none of them.
 
-### LP Assault
+### LP assault rifle
+
+Short for liquid-propellant assault rifle, which is nobody's idea of a name — this is the Thumper's problem without the
+Thumper's solution, and the nickname is still missing.
 
 Uses liquid propellant, allowing the weapon to meter the charge rather than accepting a fixed cartridge load. The
 technology serves the assault-rifle niche rather than creating a gimmick: reliable, controllable general-purpose
@@ -308,18 +318,18 @@ requires code and is not necessary to define the weapon line.
 A compact multi-barrel weapon firing rifle ammunition. It is deliberately distinct from the Storm gun: the Storm
 produces an absurd instantaneous close-range burst; the Mini-Gatling provides sustained volume at useful rifle ranges.
 
-## Line 11 — Bolt-action
+## Line 11 — DMR
 
 **Niche: general long-range rifle.** Accurate and powerful at range, but not the extreme specialist represented by the
 sniper line.
 
-| Pattern   | Weapon             | Character                                                                                   |
-| --------- | ------------------ | ------------------------------------------------------------------------------------------- |
-| Standard  | Matter bolt-action | Straightforward matterformed long-range rifle.                                              |
-| Precision | Smart rifle        | Packed with electronics and control systems for accurate, reasonably quick long-range fire. |
-| Master    |                    |                                                                                             |
+| Pattern   | Weapon      | Character                                                                                   |
+| --------- | ----------- | ------------------------------------------------------------------------------------------- |
+| Standard  | Matter DMR  | Straightforward matterformed long-range rifle.                                              |
+| Precision | Smart rifle | Packed with electronics and control systems for accurate, reasonably quick long-range fire. |
+| Master    |             |                                                                                             |
 
-### Matter bolt-action
+### Matter DMR
 
 A cheap fixed-pattern version of the vanilla long-range general-purpose rifle.
 

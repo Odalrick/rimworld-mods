@@ -69,6 +69,8 @@ Files whose names begin with `.` or `._` are skipped, so `.gitkeep` is inert.
 - Lore lives in `mods/<Mod>/lore/` — an `index.md` and a file per concept — and is canonical. In-game descriptions and
   the specs under `docs/` restate it; when they disagree, `lore/` is right and they are stale. `docs/` is for the plan
   and spec of one piece of work, not for permanent fiction.
+- Prose is British English, in-game text included. RimWorld's own strings are American; that is the game's business, not
+  this repo's, so do not "correct" mêlée, armour or colour to match it.
 - `CHANGELOG.md` is maintained by hand. Deferred work goes in `BACKLOG.md` with the reason it was deferred.
 - `About/PublishedFileId.txt` is committed, never ignored — it is the Workshop item identity and updates need it.
 

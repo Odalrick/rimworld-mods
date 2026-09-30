@@ -27,16 +27,31 @@ The fix is to put the drawbacks back where they belong, and then stop apologisin
 
 ## The three classes
 
-The distinction is mobility first, then ammunition:
+The real line is blurred, and where it is sharp it is about crews. An LMG gunner moves with the rifle element and works
+the gun alone. An MMG's full capability comes from a crew, an ammunition supply, a tripod and barrel management. An HMG
+is crew-served and effectively emplacement- or vehicle-dependent.
 
-| Class   | Carried     | Fires               |
-| ------- | ----------- | ------------------- |
-| **LMG** | Manportable | Normal rifle rounds |
-| **MMG** | Stationary  | Normal rifle rounds |
-| **HMG** | Mounted     | Heavy rounds        |
+RimWorld is not getting a crewing requirement — one pawn operates everything — so the distinction has to be drawn
+somewhere a single gunner can feel it. Draw it at what the gunner brought.
 
-An MMG is not a heavier-calibre LMG; it is the same ammunition from something that has stopped moving. The step up to
-the HMG is where the round itself changes.
+| Class   | Configuration                                                          | Round        | Answers                 |
+| ------- | ---------------------------------------------------------------------- | ------------ | ----------------------- |
+| **LMG** | Light and movable, some of which is simply carrying less ammunition    | 5.56         | There are a lot of them |
+| **MMG** | Can be the same gun: tripod, spare barrels, three times the ammunition | 5.56 or 7.62 | They are still coming   |
+| **HMG** | Heavy, emplaced                                                        | 12.7         | It is armoured          |
+
+The useful part is that an MMG can be **the same model of weapon** as the LMG. What makes it one is the tripod, the
+barrels to swap when the first is spent, and enough ammunition to justify swapping them. That is also why it cannot fire
+unsupported: the configuration is the support.
+
+None of the kit is a mechanic. Vanilla has no ammunition system and is not getting one here, so spare barrels and three
+times the ammunition are the justification for the numbers rather than things to track — they cash out as burst length
+and cooldown in the table below.
+
+Calibre is a second axis and it is not locked to the first. An MMG may step up to the heavier rifle round rather than
+just carry more of the light one. The HMG's 12.7 is where it stops being an infantry weapon at all — effective against
+light vehicles, which here means mechanoids and power armour, so its identity is armour penetration rather than more of
+the same damage.
 
 ## The three states
 
@@ -122,12 +137,12 @@ same handgun problem from the other end, with a movement bonus; the two are comp
 
 ## The ladder
 
-| Weapon            | What it is                                                                     |
-| ----------------- | ------------------------------------------------------------------------------ |
-| **Assault rifle** | Mobile generalist                                                              |
-| **LMG**           | Mobile support weapon, increasingly effective braced and deployed              |
-| **MMG**           | Support weapon wanting a prepared position, or at least something to brace on  |
-| **HMG**           | Stationary weapon you can carry somewhere else; once deployed, extremely nasty |
+| Weapon            | What it is                                                                    |
+| ----------------- | ----------------------------------------------------------------------------- |
+| **Assault rifle** | Mobile generalist                                                             |
+| **LMG**           | Mobile support weapon, increasingly effective braced and deployed             |
+| **MMG**           | Support weapon wanting a prepared position, or at least something to brace on |
+| **HMG**           | Stationary weapon you can carry somewhere else; once deployed, answers armour |
 
 The same trade — more firepower bought with more positional commitment — extends to the other family this came with:
 anti-materiel rifles, in light, medium and heavy.

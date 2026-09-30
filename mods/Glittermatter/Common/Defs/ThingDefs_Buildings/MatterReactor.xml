@@ -8,7 +8,7 @@
 
 It is neither fast nor efficient. It simply never stops, and it never asks anyone to do the work.</description>
     <graphicData>
-      <texPath>Things/Building/MatterReactor</texPath>
+      <texPath>Glittermatter/Things/Building/MatterReactor</texPath>
       <graphicClass>Graphic_Single</graphicClass>
       <drawSize>(1,1)</drawSize>
     </graphicData>

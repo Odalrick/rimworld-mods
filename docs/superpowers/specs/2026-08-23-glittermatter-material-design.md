@@ -229,8 +229,11 @@ this repo is public and MIT, so they must not be committed regardless.
 
 Placeholder art is therefore drawn by hand and committed under the same MIT licence as the rest of the repo:
 
-- `Common/Textures/Things/Item/Resource/Glittermatter.png`
-- `Common/Textures/Things/Building/MatterReactor.png`
+- `Common/Textures/Glittermatter/Things/Item/Resource/Glittermatter.png`
+- `Common/Textures/Glittermatter/Things/Building/MatterReactor.png`
+
+The `Glittermatter/` segment is the namespace: `texPath` is resolved across every active mod, so an un-prefixed
+`Things/Building/MatterReactor` is decided by load order and warns about nothing.
 
 Both are rough and dark; better art is wanted before publication, and is recorded in `BACKLOG.md`. A fresh clone renders
 rather than erroring, which is what matters for now.

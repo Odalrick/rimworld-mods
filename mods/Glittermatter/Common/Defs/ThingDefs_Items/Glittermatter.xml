@@ -8,7 +8,7 @@
 
 Structurally excellent and almost instant to build with. It makes poor armour, indifferent weapons, and nothing anyone would call beautiful. On the glitterworlds, it is packing material.</description>
     <graphicData>
-      <texPath>Things/Item/Resource/Glittermatter</texPath>
+      <texPath>Glittermatter/Things/Item/Resource/Glittermatter</texPath>
       <graphicClass>Graphic_StackCount</graphicClass>
     </graphicData>
     <soundInteract>Metal_Drop</soundInteract>

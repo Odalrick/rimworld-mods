@@ -76,6 +76,10 @@ Files whose names begin with `.` or `._` are skipped, so `.gitkeep` is inert.
   collision waiting to happen. `Verse.Def.AllowedDefNamesRegex` is `^[a-zA-Z0-9\-_]*$` — a hyphen would pass, but
   vanilla uses none anywhere in `Data/`, so underscore, as in `Gun_BoltActionRifle`. Renaming a def after publishing
   breaks existing saves; the names have to be right before the first Workshop upload.
+- Texture paths are namespaced the same way, and for the same reason: `Glittermatter/Things/Building/MatterReactor`,
+  with the files under `Common/Textures/Glittermatter/`. `ContentFinder` resolves a `texPath` across every active mod —
+  its own failure message says "in any active mod or in base resources" — and a collision is decided by load order with
+  no warning printed. `tests/glittermatter-defs.bats` guards the prefix.
 - `CHANGELOG.md` is maintained by hand. Deferred work goes in `BACKLOG.md` with the reason it was deferred.
 - `About/PublishedFileId.txt` is committed, never ignored — it is the Workshop item identity and updates need it.
 
@@ -94,5 +98,16 @@ confirm the failure.
 
 ## Toolchain
 
-`xmllint`, `bats`, `direnv` and `mono` are present. There is **no .NET SDK**, which is fine — the current mod is
-XML-only and compiles nothing. C# and Harmony require installing an SDK first and get their own spec.
+This repo is worked on from more than one computer and the machines differ, so check rather than assume:
+
+```sh
+for t in xmllint bats direnv pandoc mono; do command -v "$t" >/dev/null || echo "missing: $t"; done
+```
+
+`xmllint` and `bats` are what `make check` and `make test` need; nothing else is required to work on the mod. `direnv`
+reads `.envrc`. `pandoc` is for prose that arrives in some other markup. `mono` supplies `monodis`, which is the only
+way to disassemble `Assembly-CSharp.dll` here — without it, an engine claim can still be checked with `strings -e l`
+against the assembly, which reads literals but not logic. Homebrew has all of them where they are missing.
+
+There is **no .NET SDK** on any machine so far, which is fine — the current mod is XML-only and compiles nothing. C# and
+Harmony require installing an SDK first and get their own spec.

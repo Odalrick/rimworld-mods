@@ -29,25 +29,31 @@ power to get at the niche more directly. And there are a few weapons that are un
 level; those get a boost to where I think they could be so that they are a choice and not just dominated by another
 weapon.
 
-Precision ≈ Excellent+ This came out of looking at the actual vanilla quality scaling. Excellent ranged weapons aren't
+Precision ≈ Excellent+. This came out of looking at the actual vanilla quality scaling. Excellent ranged weapons aren't
 enormously better overall because their quality modifier primarily gives them 120% accuracy, while ranged damage and AP
 remain at 100%. There is a big jump to Masterwork.
 
 And importantly, not Legendary. Legendary remains something genuinely exceptional that the deterministic fabrication
 system doesn't casually reproduce.
 
-The naming of the tiers also have a theme; Standard weapons are generally just some variation on Matter `<gun>`.
-Precision are more about describing the technology, or the _one obvious_ feature; and Master Pattern weapons are given
-fanciful names of legend.
+The naming of the tiers also has a theme; Standard weapons are generally just some variation on Matter `<gun>`.
+Precision weapons are more about describing the technology or the _one obvious_ feature; and Master Pattern weapons are
+given fanciful names of legend.
+
+### Manufacturing costs
+
+Generally replace the steel price of the vanilla counterpart with glittermatter; Precision and Master can require more
+specialised material. Component cost is unchanged; and of course the work required is _very_ low. If the materials are
+next to the workbench, it is reasonable to make the weapon you need while raiders are attacking the door.
 
 ## The lines
 
-First the targeted vanilla niches, with the weapon that represents that niche, and names the line.
+First the targeted vanilla niches, with the weapon that represents each one and gives the line its name.
 
 | #  | Line           | Vanilla weapon    | Basic niche                  | What distinguishes it                                                                                  |
 | -- | -------------- | ----------------- | ---------------------------- | ------------------------------------------------------------------------------------------------------ |
-| 1  | Knife          | Knife             | Fast melee                   | Low commitment, quick attacks; basic close-combat weapon                                               |
-| 2  | Sword          | Sword             | Heavy melee                  | More decisive melee attacks; trades speed/cost for greater effectiveness                               |
+| 1  | Knife          | Knife             | Fast mêlée                   | Low commitment, quick attacks; basic close-combat weapon                                               |
+| 2  | Sword          | Sword             | Heavy mêlée                  | More decisive mêlée attacks; trades speed/cost for greater effectiveness                               |
 | 3  | Autopistol     | Autopistol        | Light handgun                | Quick, handy, short-range general-purpose sidearm                                                      |
 | 4  | Revolver       | Revolver          | Heavy handgun                | Slower but harder-hitting pistol; more emphasis on individual shots                                    |
 | 5  | Machine pistol | Machine pistol    | Light automatic              | Very short-range volume of fire; pistol-sized automatic weapon                                         |
@@ -55,8 +61,8 @@ First the targeted vanilla niches, with the weapon that represents that niche, a
 | 7  | Shotgun        | Pump shotgun      | Close-range stopping power   | Deliberate, extremely powerful close-range attacks against individual targets                          |
 | 8  | Chain shotgun  | Chain shotgun     | Close-range volume           | Trades reach for enormous short-range damage output; handles multiple/rapid targets better than pump   |
 | 9  | Assault rifle  | Assault rifle     | General-purpose rifle        | Good range, accuracy and automatic fire; deliberately broad applicability                              |
-| 10 | LMG            | LMG               | Sustained rifle-calibre fire | Volume of fire at useful rifle ranges; should reward prepared/braced/deployed use in our redesign      |
-| 11 | Bolt-action    | Bolt-action rifle | General long-range rifle     | Accurate, powerful long-range shots without the extreme specialization of a sniper rifle               |
+| 10 | LMG            | LMG               | Sustained rifle-calibre fire | Volume of fire at useful rifle ranges; built to reward bracing and deployment                          |
+| 11 | Bolt-action    | Bolt-action rifle | General long-range rifle     | Accurate, powerful long-range shots without the extreme specialisation of a sniper rifle               |
 | 12 | Sniper         | Sniper rifle      | Extreme precision/range      | Maximum ability to hit difficult targets at long distance, paid for with low rate of fire              |
 
 Line names default to the vanilla reference and are expected to drift off it — line 7 is the shotgun line and contains
@@ -64,53 +70,56 @@ exactly one shotgun glittermatter weapon.
 
 An alternate view of the same idea:
 
-|                 | **Lighter / faster / broader** | **Heavier / more specialized** |
+|                 | **Lighter / faster / broader** | **Heavier / more specialised** |
 | --------------- | ------------------------------ | ------------------------------ |
-| Melee           | Knife                          | Sword                          |
+| Mêlée           | Knife                          | Sword                          |
 | Handgun         | Autopistol                     | Revolver                       |
 | Short automatic | Machine pistol                 | Heavy SMG                      |
-| Close stopping  | Pump shotgun                   | Chain shotgun\*                |
+| Close stopping  | Pump shotgun                   | Chain shotgun                  |
 | Rifle automatic | Assault rifle                  | LMG                            |
 | Rifle precision | Bolt-action                    | Sniper rifle                   |
 
 Handguns are not really viable in vanilla, the drawbacks of carrying around an assault rifle all the time aren't really
-represented. To give _some_ reason for them to exists, they give a modest boost to movement speed, the inverse of
-heavier weapons.
+represented. To give _some_ reason for them to exist, they give a modest boost to movement speed, the inverse of heavier
+weapons.
 
 Ideally that would be a lack of a penalty instead; but I'm not reworking all of vanilla just to support one idea. I
-considered giving a similar speed boost to melee, but no. It gives handguns a specialised niche: being able to run away
-from melee combatants.
+considered giving a similar speed boost to mêlée, but no. It gives handguns a specialised niche: being able to run away
+from mêlée combatants.
 
 ## Line 1 — Knife
 
-**Niche: fast melee.** Low commitment and quick attacks. The line should remain the weapon for getting repeated attacks
-in rather than winning through one enormous hit.
+**Niche: fast mêlée.** Low commitment and quick attacks. The line remains the weapon for getting repeated attacks in
+rather than winning through one enormous hit.
 
 | Pattern   | Weapon       | Character                                                                 |
 | --------- | ------------ | ------------------------------------------------------------------------- |
-| Standard  | Matter knife | Cheap, standardized matterformed knife; approximately the vanilla niche.  |
+| Standard  | Matter knife | Cheap, standardised matterformed knife; approximately the vanilla niche.  |
 | Precision | Plasedge     | Glittermatter body with a small plasteel edge; fast, precise and vicious. |
-| Master    | TBD          | Master-pattern fast melee design.                                         |
+| Master    |              |                                                                           |
 
 ### Matter knife
 
 The basic matterformed knife. No Stuff variation and no quality roll: the fabrication program produces the same weapon
 every time.
 
+Technically the _only_ input to the fabrication is energy, since a knife is all steel, so it only costs glittermatter —
+which could be an advantage in itself.
+
 ### Plasedge
 
 A fixed composite design rather than a Stuff weapon. Glittermatter supplies the structure and a small amount of plasteel
-is concentrated where it matters: the edge. Its performance budget should lean into attack speed as well as damage/AP.
+is concentrated where it matters: the edge. Its performance budget leans into attack speed as well as damage/AP.
 
 ## Line 2 — Sword
 
-**Niche: heavy melee.** More decisive individual attacks than the knife line, with greater commitment between attacks.
+**Niche: heavy mêlée.** More decisive individual attacks than the knife line, with greater commitment between attacks.
 
 | Pattern   | Weapon       | Character                                                                           |
 | --------- | ------------ | ----------------------------------------------------------------------------------- |
-| Standard  | Matter sword | Standardized matterformed sword; straightforward heavy melee.                       |
+| Standard  | Matter sword | Standardised matterformed sword; straightforward heavy mêlée.                       |
 | Precision | Plasfoil     | Extremely light composite sword with a plasteel edge; speed without giving up bite. |
-| Master    | TBD          | Master-pattern heavy melee design.                                                  |
+| Master    |              |                                                                                     |
 
 ### Matter sword
 
@@ -119,24 +128,27 @@ The basic fixed-pattern sword: cheap, fast to fabricate and deliberately unremar
 ### Plasfoil
 
 Glittermatter makes it possible to put material only where the structure needs it, producing a very light blade with a
-small amount of plasteel concentrated at the edge. It should distinguish itself through unusually quick recovery for a
-sword rather than simply being a larger damage number.
+small amount of plasteel concentrated at the edge. It distinguishes itself through unusually quick recovery for a sword
+and high AP.
 
 ## Line 3 — Autopistol
 
-**Niche: mobility and reaction.** A light handgun should be something a pawn can carry without paying the mobility cost
-of a full-sized weapon. It is not intended to beat rifles in a straight firefight.
+**Niche: mobility and reaction.** A light handgun is something a pawn can carry without paying the mobility cost of a
+full-sized weapon. It is not intended to beat rifles in a straight firefight.
+
+However, since RimWorld doesn't have a general move penalty for being armed, this is a slight bonus instead. Gameplay
+over realism.
 
 | Pattern   | Weapon                | Character                                                                     |
 | --------- | --------------------- | ----------------------------------------------------------------------------- |
 | Standard  | Matter autopistol     | Cheap light handgun; quick handling and no movement penalty.                  |
 | Precision | Electrothermal pistol | Electrically vaporises an inert propellant for consistent, controllable fire. |
-| Master    | TBD                   | Master-pattern light/reaction handgun.                                        |
+| Master    |                       |                                                                               |
 
 ### Matter autopistol
 
 The basic sidearm idea stated plainly: light, quick and cheap. Its principal advantage is that carrying it does not slow
-the pawn down.
+the pawn down. In a fair fight, pistol beats mêlée.
 
 ### Electrothermal pistol
 
@@ -152,7 +164,7 @@ short-range performance.
 | --------- | ----------------- | ------------------------------------------------------------------------------- |
 | Standard  | Matter revolver   | Simple heavy sidearm; slower but harder hitting than the autopistol line.       |
 | Precision | EM-boosted pistol | Deliberately excessive hand cannon; electromagnetic assistance boosts the shot. |
-| Master    | TBD               | Master-pattern heavy handgun.                                                   |
+| Master    |                   |                                                                                 |
 
 ### Matter revolver
 
@@ -172,17 +184,17 @@ projectiles into a nearby target.
 | Pattern   | Weapon                | Character                                                        |
 | --------- | --------------------- | ---------------------------------------------------------------- |
 | Standard  | Matter machine pistol | Cheap compact automatic weapon.                                  |
-| Precision | Flechette pistol      | Fully automatic pistol firing large numbers of small flechettes. |
-| Master    | TBD                   | Master-pattern light automatic.                                  |
+| Precision | Fléchette pistol      | Fully automatic pistol firing large numbers of small flechettes. |
+| Master    |                       |                                                                  |
 
 ### Matter machine pistol
 
 The vanilla idea reproduced cheaply: a compact automatic weapon whose advantage is volume rather than reach or
 individual shot power.
 
-### Flechette pistol
+### Fléchette pistol
 
-A high-rate automatic firing small flechettes. It leans harder into the machine-pistol niche: lots of ammunition and
+A high-rate automatic firing small fléchettes. It leans harder into the machine-pistol niche: lots of ammunition and
 lots of projectiles at very short range, without trying to become a Heavy SMG.
 
 ## Line 6 — Heavy SMG
@@ -190,13 +202,13 @@ lots of projectiles at very short range, without trying to become a Heavy SMG.
 **Niche: heavy close-range automatic.** A genuinely good primary weapon inside its range: more substantial than the
 machine-pistol line, but still giving up rifle reach.
 
-| Pattern   | Weapon           | Character                                                                        |
-| --------- | ---------------- | -------------------------------------------------------------------------------- |
-| Standard  | Matter heavy SMG | Straightforward matterformed heavy SMG.                                          |
-| Precision | Sabot SMG        | Heavy pistol rounds carrying saboted penetrators; trades some raw damage for AP. |
-| Master    | TBD              | Master-pattern heavy close-range automatic.                                      |
+| Pattern   | Weapon     | Character                                                                        |
+| --------- | ---------- | -------------------------------------------------------------------------------- |
+| Standard  | Matter SMG | Straightforward matterformed heavy SMG.                                          |
+| Precision | Sabot SMG  | Heavy pistol rounds carrying saboted penetrators; trades some raw damage for AP. |
+| Master    |            |                                                                                  |
 
-### Matter heavy SMG
+### Matter SMG
 
 The vanilla niche without embellishment: strong automatic fire at short to medium range, fabricated cheaply and
 consistently.
@@ -204,11 +216,11 @@ consistently.
 ### Sabot SMG
 
 Fires heavy pistol-calibre cartridges containing smaller saboted penetrators. Compared with the vanilla Heavy SMG, its
-identity should lean away from raw damage and toward armour penetration while remaining unmistakably an SMG.
+identity leans away from raw damage and toward armour penetration while remaining unmistakably an SMG.
 
 ## Line 7 — Shotgun
 
-**Niche: short-range stopping power.** Somewhat unfilled in vanilla.
+**Niche: short-range stopping power.** Somewhat unfilled in vanilla, this leans into the anti-mech side of weaponry.
 
 | Pattern   | Weapon         | Character                                                                 |
 | --------- | -------------- | ------------------------------------------------------------------------- |
@@ -229,7 +241,7 @@ for what it holds.
 ### Prayer
 
 A revolver grenade launcher firing explosive nets. Massively complex to get right: an explosive net tangled in the
-cylinder is the obvious failure and the whole engineering problem. But when a scyther is at near-melee range, all you
+cylinder is the obvious failure and the whole engineering problem. But when a scyther is at near-mêlée range, all you
 have is a Prayer.
 
 ## Line 8 — Chain shotgun
@@ -241,7 +253,7 @@ that there are several of them.
 | --------- | -------------------- | ----------------------------------------------------------------------- |
 | Standard  | Matter chain shotgun | Cheap matterformed version of the vanilla close-range bullet hose.      |
 | Precision | Storm gun            | Stacked-projectile weapon with absurd instantaneous close-range output. |
-| Master    | TBD                  | Master-pattern close-range volume weapon.                               |
+| Master    |                      |                                                                         |
 
 ### Matter chain shotgun
 
@@ -250,8 +262,8 @@ A conventional matterformed chain shotgun, with the usual short range and enormo
 ### Storm gun
 
 Inspired by stacked-projectile / Metal-Storm-like concepts: multiple projectiles are loaded in the barrel and fired
-electronically at an absurd instantaneous rate. It should deliver a terrifying burst and then pay for it with
-substantial downtime. Unlike the Thumper, this is explicitly the weapon for volume.
+electronically at an absurd instantaneous rate. It delivers a terrifying burst and pays for it with substantial
+downtime. Unlike the Thumper, this is explicitly the weapon for volume.
 
 ## Line 9 — Assault rifle
 
@@ -262,7 +274,7 @@ dominating a specialised weapon inside its speciality.
 | --------- | -------------------- | ------------------------------------------------------------------ |
 | Standard  | Matter assault rifle | Straightforward general-purpose matterformed rifle.                |
 | Precision | LP Assault           | Liquid-propellant rifle; controlled, tunable general-purpose fire. |
-| Master    | TBD                  | Master-pattern general-purpose rifle.                              |
+| Master    |                      |                                                                    |
 
 ### Matter assault rifle
 
@@ -284,7 +296,7 @@ the close-range volume weapons.
 | --------- | ------------ | ------------------------------------------------------------------------- |
 | Standard  | Matter LMG   | Cheap conventional light machine gun.                                     |
 | Precision | Mini-Gatling | Compact rotary rifle-calibre weapon built for sustained high-volume fire. |
-| Master    | TBD          | Master-pattern sustained-fire weapon.                                     |
+| Master    |              |                                                                           |
 
 ### Matter LMG
 
@@ -305,7 +317,7 @@ sniper line.
 | --------- | ------------------ | ------------------------------------------------------------------------------------------- |
 | Standard  | Matter bolt-action | Straightforward matterformed long-range rifle.                                              |
 | Precision | Smart rifle        | Packed with electronics and control systems for accurate, reasonably quick long-range fire. |
-| Master    | TBD                | Master-pattern general long-range rifle.                                                    |
+| Master    |                    |                                                                                             |
 
 ### Matter bolt-action
 
@@ -314,7 +326,7 @@ A cheap fixed-pattern version of the vanilla long-range general-purpose rifle.
 ### Smart rifle
 
 Packed with sensors, electronics and assorted widgets to improve precision and firing cadence at long range. It does not
-have the sniper rifle's extensive targeting specialization and does not try to match an assault rifle's rapid fire.
+have the sniper rifle's extensive targeting specialisation and does not try to match an assault rifle's rapid fire.
 
 ## Line 12 — Sniper
 
@@ -324,7 +336,7 @@ have the sniper rifle's extensive targeting specialization and does not try to m
 | --------- | ------------------- | -------------------------------------------------------- |
 | Standard  | Matter sniper rifle | Conventional matterformed sniper rifle.                  |
 | Precision | Beamrider rifle     | Laser-guided in-flight correction for extreme precision. |
-| Master    | TBD                 | Master-pattern extreme-precision weapon.                 |
+| Master    |                     |                                                          |
 
 ### Matter sniper rifle
 

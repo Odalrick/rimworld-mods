@@ -27,6 +27,7 @@ of a civilisation vastly beyond it, and using it to put up walls.
 - [Glittermatter](glittermatter.md) — the material: the small machines it is stored and moved as, how it builds, and
   what the glitter actually is.
 - [The Matter Reactor](matter-reactor.md) — where it comes from, why it is slow, and why the first one cannot be built.
+- [Weapons](weapons.md) — the three patterns, the twelve lines, and which niche each line is for.
 
 ## Where the game disagrees
 
@@ -36,6 +37,7 @@ in the repo's `BACKLOG.md`.
 
 ## Not yet written
 
-The pitch names four more subsystems — the Matter Fabricator, the Matter Controller, Smartmatter, and the composites.
-None of them has more than a sentence of fiction behind it yet, so none of them has a file. A concept earns one when
-there is more to say about it than fits in a line here.
+The Matter Controller, Smartmatter and the composites are still a sentence each, so none of them has a file. A concept
+earns one when there is more to say about it than fits in a line here.
+
+The Matter Fabricator is a half-exception: what it makes has a file, and the machine itself does not.

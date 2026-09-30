@@ -4,7 +4,7 @@
   <ThingDef ParentName="ResourceBase">
     <defName>Glittermatter</defName>
     <label>glittermatter</label>
-    <description>A mass of programmable nanomachines, dull grey and flecked with silver — fused remnants of micromachines spent in earlier work. Directed by a simple transmitter, it flows into place and hardens of its own accord, expending the energy a matter reactor imparted to it.
+    <description>A block of insect-sized micromachines, gripping one another so that a person can carry them. Directed by a simple transmitter, they let go, march to the work site, crawl up to where they are needed and dissolve into the structure, expending the energy a matter reactor imparted to them. The ones that run short of energy set where they stand: the silver flecks in a dull grey wall are legs, wings and eyes.
 
 Structurally excellent and almost instant to build with. It makes poor armour, indifferent weapons, and nothing anyone would call beautiful. On the glitterworlds, it is packing material.</description>
     <graphicData>

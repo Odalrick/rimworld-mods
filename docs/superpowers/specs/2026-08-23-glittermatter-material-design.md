@@ -28,10 +28,20 @@ Explicitly **not** in v1:
 Glittermatter is the cheap plastic of the glitterworlds: a mass of programmable nanomachines that solidifies into almost
 any rigid structure.
 
-Building with it is not manual. The builder directs it with a simple transmitter and the material flows into place and
-hardens of its own accord, expending the energy the reactor imparted to it. That simple grade of control is why it sets
-dull grey flecked with silver — fused remnants of micromachines — and probably why it is called glittermatter. (The
+Raw, it is stored as insect-sized micromachines. They are glittermatter all the way through; the insect is only a useful
+macroscopic format. Thousands of loose ones are no easier to handle than a powder, so they are configured to grip one
+another into blocks of a size a person can carry.
+
+Building with it is not manual. The builder directs a block with a simple transmitter; the machines let go of each
+other, march to the work site, crawl up to where they are needed and dissolve into the structure, expending the energy
+the reactor imparted to them. That simple grade of control is why not all of them make it: the ones that run short of
+energy fail to dissolve properly and set into the surface as they were — a leg, a wing, an eye. The silver flecks in a
+dull grey wall are those. It is where the glitter comes from, and probably why it is called glittermatter. (The
 competing theory is that it is named for the glitterworlds. Either way, "glitterworlds" is the older word.)
+
+Most people find the remnants unpleasant to look at in detail, so builders usually spend a little extra time making sure
+nothing recognisable is left in a finished face — unless it is going to be painted anyway. What a later cut or breach
+exposes is nobody's problem in advance. None of it makes any difference to the durability.
 
 Because every joule stored in the material is spent hardening it in place, there is nothing left to reclaim from a
 demolished glittermatter wall. The game refunds it anyway; see Deferred.

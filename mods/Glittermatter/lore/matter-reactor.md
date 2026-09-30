@@ -4,11 +4,26 @@ A seed of glittermatter, powered and directed. It is the only source of glitterm
 
 ## How it feeds
 
-The reactor holds millions of distinct molecular machines. Given power and direction, they grow a network of leaching
-tunnels down through the rock below, dissolve whatever useful elements they find, and carry them back to be built into
-more of themselves. "Ambient matter" is the polite phrase; in practice it is eating the ground.
+A reactor is a box about a metre on a side, and what is inside it is a seed of glittermatter — machines far too small
+and far too numerous to be worth counting. There are more of them in there than there are cells in the body of whoever
+installed it, by a margin wide enough to make the comparison pointless. The number that means anything is the number of
+distinct designs in the seed, and that is a matter of thousands; see Adaptation below.
+
+Given power and direction, they grow a network of leaching tunnels down through the rock below, dissolve whatever useful
+elements they find, and carry them back to be built into more of themselves. "Ambient matter" is the polite phrase; in
+practice it is eating the ground.
 
 What comes out is stacked as blocks of gripping micromachines, the format the material is stored in everywhere else.
+
+## What it eats besides rock
+
+Rock is slow. Anything that has already been refined is far easier to take apart, so a running reactor keeps machines
+out on the floor around it, collecting whatever has been dropped and left — scrap, shards, spoilage, the ordinary litter
+of a working colony — and carrying it back to be dismantled. The ground near a reactor stays conspicuously clean, and
+colonists work out quickly that this is the cheapest way to make something go away.
+
+It does not discriminate, and it is a box a metre on a side. What that implies about the disposal of things larger than
+litter is obvious to everyone and discussed by nobody.
 
 ## Slow on purpose
 
@@ -31,3 +46,13 @@ never manufactured. Holding one does not, by itself, let you make another: the m
 do not carry the library that would let them be re-adapted.
 
 Exotic traders carry them. That is the entire supply chain.
+
+## Where the game disagrees
+
+Points where the mod's mechanics do not match the fiction, recorded rather than quietly tolerated:
+
+- **It eats nothing.** The leaching tunnels are flavour on the power draw; the reactor consumes watts and no matter at
+  all, and does not care what is under it.
+- **It does not clear rubbish.** Filth and dropped junk within reach should be collected and destroyed, the way the
+  trashcan mods do it — as flavour, not throughput, so output stays on the reactor's own clock. No vanilla comp destroys
+  filth, so this needs C#; see `BACKLOG.md`.

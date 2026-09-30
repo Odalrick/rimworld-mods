@@ -28,6 +28,12 @@ of a civilisation vastly beyond it, and using it to put up walls.
   what the glitter actually is.
 - [The Matter Reactor](matter-reactor.md) — where it comes from, why it is slow, and why the first one cannot be built.
 
+## Where the game disagrees
+
+A concept file ends with a section of that name when the mod's mechanics and the fiction have drifted apart. Those
+sections are the standing list of what the fiction is owed; the work itself, and the reason it has not happened, lives
+in the repo's `BACKLOG.md`.
+
 ## Not yet written
 
 The pitch names four more subsystems — the Matter Fabricator, the Matter Controller, Smartmatter, and the composites.

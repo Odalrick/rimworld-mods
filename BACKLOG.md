@@ -31,5 +31,11 @@ Deferred work, with the reason it was deferred. Entries move out of here when th
   render, but they are rough and very dark; the resource in particular reads as a near-black lump. Wanted before
   publishing. Ludeon's own textures are packed in Unity bundles and copyrighted — they must never be committed here.
 
+- **Matter reactors should eat rubbish** — filth and dropped junk within a short radius collected and destroyed, the way
+  the trashcan mods do it. The lore has the machines taking apart anything refined they can reach, and rock only because
+  it is what is there. Flavour rather than throughput: output should stay on the reactor's own clock, so that tidying
+  the floor is not a production strategy. No vanilla comp destroys filth, so it needs a custom `ThingComp` and therefore
+  a .NET SDK, which is not installed — the same blocker as the deconstruct patch.
+
 - **Reactor balance** — output rate, power draw and build cost are all first-pass. They want play testing rather than
   arithmetic.

@@ -28,6 +28,8 @@ Each mod is a directory under `mods/`. Mod content lives in `Common/`, which is 
 that isn't tied to a specific game version; version-specific overrides would go in a sibling `1.6/` (see
 `docs/superpowers/specs/` for why, and for the load-order rules this relies on).
 
+A mod's fiction lives in `mods/<Mod>/lore/`, and `ideas/` at the root holds designs for mods that don't exist yet.
+
 ## Development
 
 ```sh

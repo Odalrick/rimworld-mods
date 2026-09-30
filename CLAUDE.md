@@ -68,7 +68,8 @@ Files whose names begin with `.` or `._` are skipped, so `.gitkeep` is inert.
 - Semver. `1.0.0` is reserved for the first Steam Workshop publish.
 - Lore lives in `mods/<Mod>/lore/` — an `index.md` and a file per concept — and is canonical. In-game descriptions and
   the specs under `docs/` restate it; when they disagree, `lore/` is right and they are stale. `docs/` is for the plan
-  and spec of one piece of work, not for permanent fiction.
+  and spec of one piece of work, not for permanent fiction. `ideas/` at the root holds designs for mods that do not
+  exist yet — not deferred work on something that does, which is `BACKLOG.md`.
 - Prose is British English, in-game text included. RimWorld's own strings are American; that is the game's business, not
   this repo's, so do not "correct" mêlée, armour or colour to match it.
 - Def names are namespaced with the mod: `Glittermatter_Raw`, `Glittermatter_Reactor`, `Glittermatter_Banshee`. A

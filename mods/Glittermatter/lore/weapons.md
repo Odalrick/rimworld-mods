@@ -313,8 +313,12 @@ the close-range volume weapons.
 
 ### Matter LMG
 
-A conventional matterformed LMG. The long-term design intends LMGs to benefit from bracing/deployment, but that mechanic
-requires code and is not necessary to define the weapon line.
+A conventional matterformed LMG.
+
+The LMG's real problem is not this mod's to solve. Vanilla's is weak because the game omits the reasons a machine gun is
+inconvenient, leaving its shooting as the only thing left to balance against; the fix is a separate mod, sketched in
+`ideas/support-weapons.md` at the repo root, which moves that cost into bracing and deployment. It needs C#, so this
+line is defined without it and would simply be better alongside it.
 
 ### Mini-Gatling
 

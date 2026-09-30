@@ -30,9 +30,10 @@ Restated here because v1 depends on it. The canonical version lives in `mods/Gli
 Glittermatter is the cheap plastic of the glitterworlds: a mass of programmable nanomachines that solidifies into almost
 any rigid structure.
 
-Raw, it is stored as insect-sized micromachines. They are glittermatter all the way through; the insect is only a useful
-macroscopic format. Thousands of loose ones are no easier to handle than a powder, so they are configured to grip one
-another into blocks of a size a person can carry.
+Raw, it is stored as micromachines around the size of insects — a size, not a taxonomy, and a loose one. Form follows
+local conditions; legs and wings are general enough that insect and spider shapes come up constantly. They are
+glittermatter all the way through, the machine being a format rather than a shell. Thousands of loose ones are no easier
+to handle than a powder, so they are configured to grip one another into blocks of a size a person can carry.
 
 Building with it is not manual. The builder directs a block with a simple transmitter; the machines let go of each
 other, march to the work site, crawl up to where they are needed and dissolve into the structure, expending the energy

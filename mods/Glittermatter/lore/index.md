@@ -24,8 +24,8 @@ of a civilisation vastly beyond it, and using it to put up walls.
 
 ## Concepts
 
-- [Glittermatter](glittermatter.md) — the material: the insect-sized machines it is stored as, how it builds, and what
-  the glitter actually is.
+- [Glittermatter](glittermatter.md) — the material: the small machines it is stored and moved as, how it builds, and
+  what the glitter actually is.
 - [The Matter Reactor](matter-reactor.md) — where it comes from, why it is slow, and why the first one cannot be built.
 
 ## Not yet written

@@ -343,7 +343,9 @@ A compact multi-barrel weapon firing rifle ammunition. It is deliberately distin
 produces an absurd instantaneous close-range burst; the Mini-Gatling provides sustained volume at useful rifle ranges.
 
 It leans into the burst. The damage per round drops again, below the Matter LMG's, and the burst gets longer and faster.
-A longer warmup, standing in for the barrels spinning up, is a natural place to pay for it.
+
+There is no spin-up penalty. Real rotary guns do not wind up before they fire; that is game fiction, and this weapon
+does not borrow it. Warmup is the time spent bringing the weapon to bear, here as everywhere else.
 
 ### Mandated Deluge
 
@@ -390,12 +392,18 @@ penetration, so the game derives it from damage; the exact rule is for the scrip
 | LMG              | 12     | 6 @ 7 ticks  | 1.8        | 1.6          | 25.9  | .40 / .48 / .35 / .26                    | 1.51    | 18.1    |
 | Minigun          | 10     | 25 @ 5 ticks | 2.5        | 1.5          | 30.9  | .20 / .25 / .25 / .18                    | 4.17    | 41.7    |
 | Matter LMG       | 11     | 6 @ 7 ticks  | 1.8        | 1.6          | 30.9  | a little above vanilla's LMG             | 1.51    | 16.6    |
-| Mini-Gatling     | 10     | 10 @ 5 ticks | 2.0        | 1.6          | 30.9  | about .35 at medium                      | 2.30    | 23.0    |
+| Mini-Gatling     | 10     | 10 @ 5 ticks | 1.8        | 1.6          | 30.9  | about .35 at medium                      | 2.41    | 24.1    |
 | Mandated Deluge  | 10     | single shot  | 0.25       | 0.25         | 30.9  | about .45 at medium                      | 2.00    | 20.0    |
 | Terminal Warrant | 11     | single shot  | 0.4        | 0.5          | 30.9  | about .75 at medium                      | 1.11    | 12.2    |
 
 The top three rows are vanilla. Multiplying raw DPS by medium accuracy, vanilla's assault rifle beats vanilla's LMG at
-25 tiles — 7.1 against 6.3 — which is the LMG's problem in one line.
+25 tiles — 7.1 against 6.3.
+
+That is the bleak reading, and it undersells the LMG. A miss is not a bullet that vanished: it carries on and hits
+something, even if that is only a wall, the cover or the ground. Against a group, some of those strays hit other
+enemies, and the ones that hit cover wear it down. Hit chance against the chosen target is the measure that matters for
+the precision weapons and the one that matters least for the volume ones — which the comparison script will have to
+account for rather than inherit.
 
 ## Line 11 — DMR
 

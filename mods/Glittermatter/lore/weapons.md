@@ -285,7 +285,7 @@ dominating a specialised weapon inside its speciality.
 | --------- | -------------------- | ------------------------------------------------------------------ |
 | Standard  | Matter assault rifle | Straightforward general-purpose matterformed rifle.                |
 | Precision | LP assault rifle     | Liquid-propellant rifle; controlled, tunable general-purpose fire. |
-| Master    |                      |                                                                    |
+| Master    | Terminal Warrant     | Fires when it is pointed at something worth hitting.               |
 
 ### Matter assault rifle
 
@@ -300,20 +300,37 @@ Uses liquid propellant, allowing the weapon to meter the charge rather than acce
 technology serves the assault-rifle niche rather than creating a gimmick: reliable, controllable general-purpose
 performance.
 
+### Terminal Warrant
+
+The assault rifle carrying the same fire-control system as the Mandated Deluge (see line 10): the shooter holds the
+trigger and points, and the weapon decides when a shot is worth taking. Where the Deluge spends that system on volume,
+the Warrant spends it on precision — fewer shots, each of them placed. The assault rifle is the precision tool of the
+pair; the LMG is suppression.
+
 ## Line 10 — LMG
 
 **Niche: sustained rifle-calibre fire.** The answer to "there are a lot of them": longer-ranged and more sustained than
 the close-range volume weapons.
 
-| Pattern   | Weapon       | Character                                                                 |
-| --------- | ------------ | ------------------------------------------------------------------------- |
-| Standard  | Matter LMG   | Cheap conventional light machine gun.                                     |
-| Precision | Mini-Gatling | Compact rotary rifle-calibre weapon built for sustained high-volume fire. |
-| Master    |              |                                                                           |
+| Pattern   | Weapon          | Character                                                                 |
+| --------- | --------------- | ------------------------------------------------------------------------- |
+| Standard  | Matter LMG      | A dedicated light machine gun, which vanilla's is not.                    |
+| Precision | Mini-Gatling    | Compact rotary rifle-calibre weapon built for sustained high-volume fire. |
+| Master    | Mandated Deluge | Automatic shooting rather than automatic fire.                            |
 
 ### Matter LMG
 
-A conventional matterformed LMG.
+A conventional matterformed LMG — and, unlike vanilla's, a dedicated one.
+
+Vanilla's LMG does not read as a light machine gun. It hits harder than the assault rifle with a slower round and
+reaches less far, which is the profile of a full-calibre gun, not of a squad automatic weapon firing the rifle's
+cartridge. It is also cheaper than the assault rifle, because it takes fewer components.
+
+The Matter LMG is the dedicated version: the assault rifle's round and the assault rifle's reach, fired in the LMG's
+six-round burst. The damage comes down to the assault rifle's, the range goes up to the assault rifle's, and the
+accuracy lands wherever it has to for the whole to spend the same budget as vanilla's LMG. Range costs budget — but with
+accuracy at long range as poor as the LMG's, not enough to eat the whole damage reduction, so the accuracy probably ends
+up a little above vanilla rather than below it.
 
 The LMG's real problem is not this mod's to solve. Vanilla's is weak because the game omits the reasons a machine gun is
 inconvenient, leaving its shooting as the only thing left to balance against; the fix is a separate mod, sketched in
@@ -324,6 +341,61 @@ line is defined without it and would simply be better alongside it.
 
 A compact multi-barrel weapon firing rifle ammunition. It is deliberately distinct from the Storm gun: the Storm
 produces an absurd instantaneous close-range burst; the Mini-Gatling provides sustained volume at useful rifle ranges.
+
+It leans into the burst. The damage per round drops again, below the Matter LMG's, and the burst gets longer and faster.
+A longer warmup, standing in for the barrels spinning up, is a natural place to pay for it.
+
+### Mandated Deluge
+
+The Deluge replaces automatic fire with automatic shooting.
+
+The shooter holds the trigger in and points the weapon at the enemy. A low-level expert system watches what the barrel
+is pointed at and closes the firing circuit when that is something worth hitting. The shooter still has to point it at
+the right thing; what is taken out of their decision loop is the timing of the shot. It is the old principle — how does
+an officer dig a hole? He says: "Sergeant, I need a hole here."
+
+Mechanically there is no burst. The weapon fires single shots with a very short warmup and a very short cooldown, which
+gives a rate of fire slower than a burst while it lasts but comparable over a fight. The burst's weakness goes with it:
+a burst weapon whose target goes down mid-burst stops there and still pays the cooldown, where the Deluge simply picks
+its next shot. That is the point of the weapon, not a side effect, and the numbers have to pay for it.
+
+The same system makes the shooter's own trigger habits matter less. _Trigger-happy_ and _careful shooter_ are both about
+how quickly the trigger is pulled, and as far as can be told without disassembling it, the game applies them to warmup
+and not to cooldown. With most of the cycle moved into cooldown, the weapon has taken that decision away: trigger-happy
+loses most of its edge, and careful shooter — usually counted among the weakest traits — loses most of its penalty and
+becomes a good one. How much of each depends on how the cycle is split between warmup and cooldown, which is a dial for
+balancing rather than a fixed property.
+
+The Terminal Warrant in line 9 carries the same system.
+
+### Numbers
+
+Nothing below is settled except the vanilla rows, which are read from the 1.6.4871 defs. Every other figure is a
+starting point to play with, and the comparison script will move them. They are recorded so the intent behind each
+weapon has numbers attached, not because the numbers are right.
+
+**Accuracy bands are fixed distances, not fractions of the weapon's range.** _Touch_ is 3 tiles, _short_ 12, _medium_ 25
+and _long_ 40 — `Verse.ShootTuning` in the 1.6.4871 assembly. A weapon's accuracy is the hit chance contributed by the
+weapon at that distance, before the shooter, cover, weather and the target's size are applied; the wiki has it
+interpolated between the bands, which has not been checked against the assembly. A weapon whose range stops short of 40
+never uses its _long_ figure at full value, so vanilla's LMG, at 25.9 tiles, barely gets past _medium_.
+
+Cycle time is warmup, plus the gaps between the shots of the burst, plus cooldown; there are 60 ticks to a second. _Raw
+DPS_ is damage times shots per second, before accuracy and armour. None of the bullets involved sets an armour
+penetration, so the game derives it from damage; the exact rule is for the script to settle.
+
+| Weapon           | Damage | Burst        | Warmup (s) | Cooldown (s) | Range | Accuracy (touch / short / medium / long) | Shots/s | Raw DPS |
+| ---------------- | ------ | ------------ | ---------- | ------------ | ----- | ---------------------------------------- | ------- | ------- |
+| Assault rifle    | 11     | 3 @ 10 ticks | 1.0        | 1.7          | 30.9  | .60 / .70 / .65 / .55                    | 0.99    | 10.9    |
+| LMG              | 12     | 6 @ 7 ticks  | 1.8        | 1.6          | 25.9  | .40 / .48 / .35 / .26                    | 1.51    | 18.1    |
+| Minigun          | 10     | 25 @ 5 ticks | 2.5        | 1.5          | 30.9  | .20 / .25 / .25 / .18                    | 4.17    | 41.7    |
+| Matter LMG       | 11     | 6 @ 7 ticks  | 1.8        | 1.6          | 30.9  | a little above vanilla's LMG             | 1.51    | 16.6    |
+| Mini-Gatling     | 10     | 10 @ 5 ticks | 2.0        | 1.6          | 30.9  | about .35 at medium                      | 2.30    | 23.0    |
+| Mandated Deluge  | 10     | single shot  | 0.25       | 0.25         | 30.9  | about .45 at medium                      | 2.00    | 20.0    |
+| Terminal Warrant | 11     | single shot  | 0.4        | 0.5          | 30.9  | about .75 at medium                      | 1.11    | 12.2    |
+
+The top three rows are vanilla. Multiplying raw DPS by medium accuracy, vanilla's assault rifle beats vanilla's LMG at
+25 tiles — 7.1 against 6.3 — which is the LMG's problem in one line.
 
 ## Line 11 — DMR
 

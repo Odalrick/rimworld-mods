@@ -172,8 +172,10 @@ short-range performance.
 ### Familiar
 
 A pistol strapped to the forearm that talks. Fiction is full of talking guns — Cyberpunk 2077's smart pistol among them
-— and the Familiar is one of them: more friend, or pet, than weapon. It is a babysitter in a dangerous world. It keeps
-up a running commentary, notices things, and is always there.
+— and the Familiar is one of them: more pet than weapon. It is a babysitter in a dangerous world.
+
+The idea is the same as a persona weapon's, but the core is far simpler. It talks and has a personality, and it helps
+with simple things — a reminder, a word on how to take the next shot. Nobody will mistake it for a real AI.
 
 It knows who it belongs to. Every Familiar is biocoded to the first pawn who equips it, and will not work for anyone
 else.

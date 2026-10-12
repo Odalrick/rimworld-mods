@@ -177,7 +177,7 @@ short-range performance.
 | --------- | ----------------- | ------------------------------------------------------------------------------- |
 | Standard  | Matter revolver   | Simple heavy sidearm; slower but harder hitting than the autopistol line.       |
 | Precision | EM-boosted pistol | Deliberately excessive hand cannon; electromagnetic assistance boosts the shot. |
-| Master    |                   |                                                                                 |
+| Master    | Auto-3            | Three-round burst so fast the recoil arrives after the last round has left.     |
 
 ### Matter revolver
 
@@ -188,6 +188,16 @@ mobility advantage of the handgun class.
 
 A somewhat ridiculous Desert-Eagle-like solution: conventional propulsion gets electromagnetic assistance. High damage
 and penetration for a handgun, paid for in cadence and handling rather than by pretending it is a general-purpose rifle.
+
+### Auto-3
+
+Inspired by RoboCop's Auto 9, which is already a legendary weapon; the marketing team only had to change the number. The
+3 is the burst.
+
+It fires three rounds so quickly that the shooter does not have time to feel the recoil. All three have left the barrel
+before the kick reaches the hand, so all three go where the first was aimed. That keeps it in the line rather than
+taking it out: the niche is power in individual shots, and three rounds on one point are one very heavy shot delivered
+in three parts. Mechanically it is a three-round burst with almost no gap between the rounds.
 
 ## Line 5 — Machine pistol
 

@@ -197,7 +197,11 @@ Inspired by RoboCop's Auto 9, which is already a legendary weapon; the marketing
 It fires three rounds so quickly that the shooter does not have time to feel the recoil. All three have left the barrel
 before the kick reaches the hand, so all three go where the first was aimed. That keeps it in the line rather than
 taking it out: the niche is power in individual shots, and three rounds on one point are one very heavy shot delivered
-in three parts. Mechanically it is a three-round burst with almost no gap between the rounds.
+in three parts.
+
+How that is done in game is open. It may be a three-round burst with almost no gap between the rounds, or a single heavy
+shot whose bullet sprite shows three rounds travelling together. The second is truer to "one shot in three parts"; which
+one works is for testing to decide.
 
 ## Line 5 — Machine pistol
 

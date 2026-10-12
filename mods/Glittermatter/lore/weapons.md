@@ -414,7 +414,7 @@ sniper line.
 | --------- | ----------- | ------------------------------------------------------------------------------------------- |
 | Standard  | Matter DMR  | Straightforward matterformed long-range rifle.                                              |
 | Precision | Smart rifle | Packed with electronics and control systems for accurate, reasonably quick long-range fire. |
-| Master    |             |                                                                                             |
+| Master    | Argus       | A rifle carried on a robotic shoulder arm and aimed from a separate controller.             |
 
 ### Matter DMR
 
@@ -424,6 +424,18 @@ A cheap fixed-pattern version of the vanilla long-range general-purpose rifle.
 
 Packed with sensors, electronics and assorted widgets to improve precision and firing cadence at long range. It does not
 have the sniper rifle's extensive targeting specialisation and does not try to match an assault rifle's rapid fire.
+
+The barrel is stabilised electronically, and everything that does the stabilising has to fit somewhere, so the rifle is
+very bulky. What sits where the scope would be is not a scope: it is a small screen showing what the rifle's camera
+sees.
+
+### Argus
+
+Barely recognisable as a rifle. The shooter wears a harness, the harness carries a robotic arm on the shoulder, and the
+arm holds the entire rifle. The weapon is still braced against the shoulder, and the magazine is still changed by hand.
+
+There is no trigger and no grip. Aiming is done through a separate controller, so the shooter's hands are never on the
+rifle except to reload it.
 
 ## Line 12 — Sniper
 

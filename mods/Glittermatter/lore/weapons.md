@@ -156,7 +156,7 @@ over realism.
 | --------- | --------------------- | ----------------------------------------------------------------------------- |
 | Standard  | Matter autopistol     | Cheap light handgun; quick handling and no movement penalty.                  |
 | Precision | Electrothermal pistol | Electrically vaporises an inert propellant for consistent, controllable fire. |
-| Master    |                       |                                                                               |
+| Master    | Familiar              | A talking pistol strapped to the arm; more companion than weapon.             |
 
 ### Matter autopistol
 
@@ -168,6 +168,25 @@ the pawn down. In a fair fight, pistol beats mêlée.
 Electrical energy vaporises an inert working fluid or propellant to launch the projectile. The technology is used for
 consistency and handling rather than turning a pistol into a rifle: quick warmup, quick follow-up shots and good
 short-range performance.
+
+### Familiar
+
+A pistol strapped to the forearm that talks. Fiction is full of talking guns — Cyberpunk 2077's smart pistol among them
+— and the Familiar is one of them: more friend, or pet, than weapon. It is a babysitter in a dangerous world. It keeps
+up a running commentary, notices things, and is always there.
+
+It knows who it belongs to. Every Familiar is biocoded to the first pawn who equips it, and will not work for anyone
+else.
+
+The benefit of the company is small and deliberately so: the pawn carrying it is a little calmer. Mechanically that is a
+lowered mental break threshold, about −0.02, which delays breaks exactly as much as +2 mood would without appearing in
+the mood list. A real mood thought would be better, but nothing in vanilla grants one for carrying a particular weapon,
+and that would need C#. A slight global work speed bonus was the fallback, and is the wrong flavour: a babysitter keeps
+you calm, it does not make you work faster.
+
+Two things here are still to be confirmed in game. Vanilla only ever sets `biocodeOnEquip` on the persona weapons' comp,
+so whether the ordinary `CompProperties_Biocodable` accepts it is unchecked. And vanilla uses `equippedStatOffsets` only
+for movement speed; it should apply to `MentalBreakThreshold` just the same, but nobody has watched it do so.
 
 ## Line 4 — Revolver
 

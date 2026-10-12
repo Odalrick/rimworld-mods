@@ -437,6 +437,9 @@ arm holds the entire rifle. The weapon is still braced against the shoulder, and
 There is no trigger and no grip. Aiming is done through a separate controller, so the shooter's hands are never on the
 rifle except to reload it.
 
+The line stays plain on purpose. The technology is exotic, but what it buys is just a better rifle at the DMR's job; no
+weapon here gets a mechanical gimmick of its own.
+
 ## Line 12 — Sniper
 
 **Niche: extreme precision and range.** The weapon for the particular difficult target over there that needs shooting.

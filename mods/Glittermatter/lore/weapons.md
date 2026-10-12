@@ -29,6 +29,11 @@ power to get at the niche more directly. And there are a few weapons that are un
 level; those get a boost to where I think they could be so that they are a choice and not just dominated by another
 weapon.
 
+The default is plain: however exotic the technology, what it buys is a better weapon at the line's job. Some weapons —
+mostly Master patterns — pick up a small mechanical tweak that falls out of their technology, such as the Banshee's
+minimum range or the Mandated Deluge's single shots. Those tweaks appeared while the weapons were being described rather
+than being planned in, and a weapon without one is not missing anything.
+
 Precision ≈ Excellent+. This came out of looking at the actual vanilla quality scaling. Excellent ranged weapons aren't
 enormously better overall because their quality modifier primarily gives them 120% accuracy, while ranged damage and AP
 remain at 100%. There is a big jump to Masterwork.
@@ -436,9 +441,6 @@ arm holds the entire rifle. The weapon is still braced against the shoulder, and
 
 There is no trigger and no grip. Aiming is done through a separate controller, so the shooter's hands are never on the
 rifle except to reload it.
-
-The line stays plain on purpose. The technology is exotic, but what it buys is just a better rifle at the DMR's job; no
-weapon here gets a mechanical gimmick of its own.
 
 ## Line 12 — Sniper
 

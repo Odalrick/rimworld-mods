@@ -278,6 +278,9 @@ Where the Sabot SMG traded damage for penetration, this gets both: the sliver go
 happens on the far side of it. The explosion is inside the target, not around it, so mechanically it is a high-damage,
 high-penetration bullet rather than one with a blast radius — area bursts are the chain shotgun line's business.
 
+Names considered so far: Glass Cannon and Glass SMG come closest, without either one settling it. Hailstone would follow
+the Storm gun's weather, but does not fit the weapon very well.
+
 ## Line 7 — Shotgun
 
 **Niche: short-range stopping power.** Somewhat unfilled in vanilla, this leans into the anti-mech side of weaponry.

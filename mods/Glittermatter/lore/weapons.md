@@ -442,7 +442,9 @@ loses most of its edge, and careful shooter — usually counted among the weakes
 becomes a good one. How much of each depends on how the cycle is split between warmup and cooldown, which is a dial for
 balancing rather than a fixed property.
 
-The Terminal Warrant in line 9 carries the same system.
+The Terminal Warrant in line 9 carries the same system, and the two names share a theme for that reason. A warrant and a
+mandate are both authority handed down: the shooter delegates the decision to fire, and the weapon acts on it. The theme
+is authority, not law.
 
 ### Numbers
 

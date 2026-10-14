@@ -269,6 +269,15 @@ consistently.
 Fires heavy pistol-calibre cartridges containing smaller saboted penetrators. Compared with the vanilla Heavy SMG, its
 identity leans away from raw damage and toward armour penetration while remaining unmistakably an SMG.
 
+### Master pattern — not yet named
+
+Still explosive penetrators, only needlessly complex. The weapon fires slivers of unstable crystal, driven
+electromagnetically; they penetrate, and then they explode.
+
+Where the Sabot SMG traded damage for penetration, this gets both: the sliver goes through the armour, and the damage
+happens on the far side of it. The explosion is inside the target, not around it, so mechanically it is a high-damage,
+high-penetration bullet rather than one with a blast radius — area bursts are the chain shotgun line's business.
+
 ## Line 7 — Shotgun
 
 **Niche: short-range stopping power.** Somewhat unfilled in vanilla, this leans into the anti-mech side of weaponry.

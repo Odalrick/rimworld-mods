@@ -316,6 +316,16 @@ Inspired by stacked-projectile / Metal-Storm-like concepts: multiple projectiles
 electronically at an absurd instantaneous rate. It delivers a terrifying burst and pays for it with substantial
 downtime. Unlike the Thumper, this is explicitly the weapon for volume.
 
+### Master pattern — not yet named
+
+The idea so far is programmable airburst. Every round carries a small explosive charge and a fuse the weapon sets as it
+fires, so each one bursts at the distance of whatever it was aimed at — including just behind the cover the target is
+using. A spray of them deals with a group rather than one target, which is this line's job; misses still burst beside
+the target and wear the cover down.
+
+Vanilla projectiles already support a small explosion radius, so this is XML. The radius has to stay very small: every
+round is a blast, and that includes the ones landing next to the colonists who are in the way.
+
 ## Line 9 — Assault rifle
 
 **Niche: general-purpose rifle.** The deliberately broad weapon: useful range, accuracy and automatic fire without

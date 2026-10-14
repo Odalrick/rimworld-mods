@@ -247,12 +247,12 @@ lots of projectiles at very short range, without trying to become a Heavy SMG.
 
 ### Master pattern — not yet named
 
-The same unstable crystal as the Master SMG in line 6, driven the same way. The slivers are too small to carry an
-explosive charge, so instead they are frangible: they shatter on impact and spend everything inside whatever they hit.
+The same semi-stable crystal as the Master SMG in line 6, driven the same way, and behaving the same way: on impact the
+sliver hardens enough to penetrate, then shatters. These slivers are simply too small for the shattering to become an
+explosion.
 
-That makes it the Master SMG's inverse. The SMG's slivers go through armour; these break against it. Mechanically that
-is high damage and low armour penetration — devastating against soft targets at very short range, and a poor choice
-against anything plated.
+So it is the Master SMG on a smaller scale rather than its opposite. Mechanically that is good armour penetration for
+the line, with the damage the Master SMG adds by exploding left out.
 
 ## Line 6 — Heavy SMG
 
@@ -280,14 +280,15 @@ identity leans away from raw damage and toward armour penetration while remainin
 
 ### Master pattern — not yet named
 
-Still explosive penetrators, only needlessly complex. The weapon fires slivers of unstable crystal, driven
-electromagnetically; they penetrate, and then they explode.
+Still explosive penetrators, only needlessly complex. The weapon fires slivers of semi-stable crystal, driven
+electromagnetically. On impact the crystal hardens enough to penetrate, and then it shatters; a sliver this size is
+large enough that the shattering is an explosion.
 
 Where the Sabot SMG traded damage for penetration, this gets both: the sliver goes through the armour, and the damage
 happens on the far side of it. The explosion is inside the target, not around it, so mechanically it is a high-damage,
 high-penetration bullet rather than one with a blast radius — area bursts are the chain shotgun line's business.
 
-The Master machine pistol in line 5 fires the same crystal, in slivers too small to explode.
+The Master machine pistol in line 5 fires the same crystal, in slivers too small for the shattering to explode.
 
 Names considered so far: Glass Cannon and Glass SMG come closest, without either one settling it. Hailstone would follow
 the Storm gun's weather, but does not fit the weapon very well.

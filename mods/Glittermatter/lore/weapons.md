@@ -245,6 +245,15 @@ individual shot power.
 A high-rate automatic firing small fléchettes. It leans harder into the machine-pistol niche: lots of ammunition and
 lots of projectiles at very short range, without trying to become a Heavy SMG.
 
+### Master pattern — not yet named
+
+The same unstable crystal as the Master SMG in line 6, driven the same way. The slivers are too small to carry an
+explosive charge, so instead they are frangible: they shatter on impact and spend everything inside whatever they hit.
+
+That makes it the Master SMG's inverse. The SMG's slivers go through armour; these break against it. Mechanically that
+is high damage and low armour penetration — devastating against soft targets at very short range, and a poor choice
+against anything plated.
+
 ## Line 6 — Heavy SMG
 
 **Niche: heavy close-range automatic.** A genuinely good primary weapon inside its range: more substantial than the
@@ -277,6 +286,8 @@ electromagnetically; they penetrate, and then they explode.
 Where the Sabot SMG traded damage for penetration, this gets both: the sliver goes through the armour, and the damage
 happens on the far side of it. The explosion is inside the target, not around it, so mechanically it is a high-damage,
 high-penetration bullet rather than one with a blast radius — area bursts are the chain shotgun line's business.
+
+The Master machine pistol in line 5 fires the same crystal, in slivers too small to explode.
 
 Names considered so far: Glass Cannon and Glass SMG come closest, without either one settling it. Hailstone would follow
 the Storm gun's weather, but does not fit the weapon very well.
